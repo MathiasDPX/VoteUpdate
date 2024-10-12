@@ -1,0 +1,7 @@
+name: VoteUpdate
+version: '1.0.0'
+main: gg.gyro.voteUpdate.VoteUpdate
+api-version: '1.21'
+prefix: Votes
+authors: [ Gyro3630 ]
+description: Bring 23w13a_or_b to newer version
