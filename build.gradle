@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'com.gradleup.shadow' version '8.3.0'
 }
 
 group = 'gg.gyro'
@@ -19,10 +20,16 @@ repositories {
         name = "jitpack"
         url = "https://jitpack.io"
     }
+    maven {
+        name = "mathias-maven"
+        url = uri("https://mvn.coolcraft.ovh/releases")
+    }
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
+
+    implementation("gg.gyro:LocaleAPI:snapshot")
     implementation('com.github.Revxrsal.Lamp:common:3.2.1')
     implementation('com.github.Revxrsal.Lamp:bukkit:3.2.1')
 }

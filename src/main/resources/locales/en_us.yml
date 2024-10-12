@@ -1,0 +1,27 @@
+commands:
+  vote_notfound: "Unable to find vote with name %s"
+  force_voteresult: "Forced to run %s"
+
+votes:
+  already_voted: "You have already voted!"
+  success_vote: "You voted for option %s"
+  result_title: "§6Voting Results:"
+  result_vote: "§e%name%: §f%amount% votes"
+  result_winner: "§a%s wins!"
+  result_tie: "§6It's a tie!"
+
+gui:
+  click_to_vote: "Click to vote!"
+  title: "Vote Time!"
+
+options:
+  advanced_ai:
+    name: "Advanced AI"
+    description: "Replace a random player with an advanced AI bot"
+    broadcast: "%s has became a advanced AI bot"
+  always_flying:
+    name: "Always Flying"
+    description: "According to all known laws of aviation, there is no way a mob should be able to walk"
+  charged_creeper:
+    name: "Charged Creeper"
+    description: "Every new Creeper while be charged"

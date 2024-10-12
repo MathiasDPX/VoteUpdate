@@ -1,5 +1,6 @@
 package gg.gyro.voteUpdate.votes;
 
+import gg.gyro.localeAPI.Locales;
 import gg.gyro.voteUpdate.VoteUpdate;
 import gg.gyro.voteUpdate.utils.Skull;
 import gg.gyro.voteUpdate.utils.Vote;
@@ -21,12 +22,12 @@ public class AdvancedAI extends Vote {
 
     @Override
     public String getName() {
-        return "Advanced AI";
+        return Locales.getInstance().get("options.advanced_ai.name");
     }
 
     @Override
     public String getDescription() {
-        return "Replace a random player with an advanced AI bot";
+        return Locales.getInstance().get("options.advanced_ai.description");
     }
 
     private void startBipBoopTask() {
@@ -58,7 +59,7 @@ public class AdvancedAI extends Vote {
         int random = new Random().nextInt(players.size());
         Player player = players.get(random);
 
-        Bukkit.getServer().broadcast(player.displayName().append(Component.text(" has became a advanced AI bot")));
+        Bukkit.getServer().broadcast(Component.text(Locales.getInstance().get("options.advanced_ai.broadcast").replace("%s", player.displayName().toString())));
 
         player.displayName(Component.text("[BOT] ").append(player.displayName()));
 

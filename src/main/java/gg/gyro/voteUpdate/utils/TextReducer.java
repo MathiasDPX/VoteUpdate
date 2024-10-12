@@ -3,13 +3,14 @@ package gg.gyro.voteUpdate.utils;
 
 import net.kyori.adventure.text.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TextReducer {
 
     public static List<Component> reduceText(String text, int maxSize) {
         String[] words = text.split(" ");
-        List<Component> result = List.of();
+        List<Component> result = new ArrayList<>(List.of());
         StringBuilder line = new StringBuilder();
 
         for (String word : words) {

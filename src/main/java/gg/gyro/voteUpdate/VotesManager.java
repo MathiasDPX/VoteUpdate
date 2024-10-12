@@ -1,5 +1,6 @@
 package gg.gyro.voteUpdate;
 
+import gg.gyro.localeAPI.Locales;
 import gg.gyro.voteUpdate.utils.TextReducer;
 import gg.gyro.voteUpdate.utils.Vote;
 import net.kyori.adventure.text.Component;
@@ -24,13 +25,15 @@ public class VotesManager implements Listener {
     private final Vote option2;
     private final Map<UUID, Integer> votes;
     private final Inventory gui;
+    private static Locales locales;
 
     public VotesManager(Vote option1, Vote option2) {
         this.plugin = VoteUpdate.getInstance();
+        this.locales = Locales.getInstance();
         this.option1 = option1;
         this.option2 = option2;
         this.votes = new HashMap<>();
-        this.gui = Bukkit.createInventory(null, 9, Component.text("Vote Time!"));
+        this.gui = Bukkit.createInventory(null, 9, Component.text(locales.get("gui.title")));
 
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
         proposeVote();
@@ -64,10 +67,9 @@ public class VotesManager implements Listener {
         ItemMeta meta = item.getItemMeta();
 
         meta.displayName(Component.text(vote.getName()).color(NamedTextColor.GOLD));
-        List<Component> lore = new ArrayList<>();
-        lore.addAll(TextReducer.reduceText(vote.getDescription(), 25));
+        List<Component> lore = new ArrayList<>(TextReducer.reduceText(vote.getDescription(), 25));
         lore.add(Component.empty());
-        lore.add(Component.text("Click to vote!").color(NamedTextColor.YELLOW));
+        lore.add(Component.text(locales.get("gui.click_to_vote")).color(NamedTextColor.YELLOW));
 
         meta.lore(lore);
 
@@ -98,9 +100,9 @@ public class VotesManager implements Listener {
         if (!votes.containsKey(voter.getUniqueId())) {
             voter.playSound(voter.getEyeLocation(), Sound.BLOCK_NOTE_BLOCK_BIT, 1, 1);
             votes.put(voter.getUniqueId(), option);
-            voter.sendMessage("You voted for option " + option);
+            voter.sendMessage(locales.get("votes.success_vote").replace("%s", String.valueOf(option)));
         } else {
-            voter.sendMessage("You have already voted!");
+            voter.sendMessage(locales.get("votes.already_voted"));
         }
     }
 
@@ -108,18 +110,18 @@ public class VotesManager implements Listener {
         int votesOption1 = (int) votes.values().stream().filter(v -> v == 1).count();
         int votesOption2 = (int) votes.values().stream().filter(v -> v == 2).count();
 
-        String resultMessage = "§6Voting Results:\n" +
-                "§e" + option1.getName() + ": §f" + votesOption1 + " votes\n" +
-                "§e" + option2.getName() + ": §f" + votesOption2 + " votes\n";
+        String resultMessage = locales.get("votes.result_title")+"\n" +
+                locales.get("votes.result_vote").replace("%name%", option1.getName()).replace("%amount%", String.valueOf(votesOption1))+"\n" +
+                locales.get("votes.result_vote").replace("%name%", option2.getName()).replace("%amount%", String.valueOf(votesOption2))+"\n";
 
         if (votesOption1 > votesOption2) {
-            resultMessage += "§a" + option1.getName() + " wins!";
+            resultMessage += locales.get("votes.result_winner").replace("%s", option1.getName());
             new BukkitRunnable() {@Override public void run() {option1.apply();}}.runTaskAsynchronously(VoteUpdate.getInstance());
         } else if (votesOption2 > votesOption1) {
-            resultMessage += "§a" + option2.getName() + " wins!";
+            resultMessage += locales.get("votes.result_winner").replace("%s", option2.getName());
             new BukkitRunnable() {@Override public void run() {option2.apply();}}.runTaskAsynchronously(VoteUpdate.getInstance());
         } else {
-            resultMessage += "§6It's a tie!";
+            resultMessage += locales.get("votes.result_tie");
         }
 
         for (Player player : Bukkit.getOnlinePlayers()) {

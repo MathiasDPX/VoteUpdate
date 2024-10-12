@@ -1,5 +1,6 @@
 package gg.gyro.voteUpdate.votes;
 
+import gg.gyro.localeAPI.Locales;
 import gg.gyro.voteUpdate.VoteUpdate;
 import gg.gyro.voteUpdate.utils.Vote;
 import org.bukkit.Material;
@@ -13,12 +14,12 @@ public class AlwaysFlying extends Vote {
 
     @Override
     public String getName() {
-        return "Always Flying";
+        return Locales.getInstance().get("options.always_flying.name");
     }
 
     @Override
     public String getDescription() {
-        return "According to all known laws of aviation, there is no way a mob should be able to walk";
+        return Locales.getInstance().get("options.always_flying.description");
     }
 
     @Override

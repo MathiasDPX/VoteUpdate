@@ -1,5 +1,6 @@
 package gg.gyro.voteUpdate.votes;
 
+import gg.gyro.localeAPI.Locales;
 import gg.gyro.voteUpdate.VoteUpdate;
 import gg.gyro.voteUpdate.utils.Vote;
 import org.bukkit.Material;
@@ -13,12 +14,12 @@ public class ChargedCreeper extends Vote {
 
     @Override
     public String getName() {
-        return "Charged Creeper";
+        return Locales.getInstance().get("options.charged_creeper.name");
     }
 
     @Override
     public String getDescription() {
-        return "Every new Creeper while be charged";
+        return Locales.getInstance().get("options.charged_creeper.description");
     }
 
     @Override
