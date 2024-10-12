@@ -18,7 +18,7 @@ options:
   advanced_ai:
     name: "Advanced AI"
     description: "Replace a random player with an advanced AI bot"
-    broadcast: "%s has became a advanced AI bot"
+    broadcast: "%s has become an advanced AI bot"
   always_flying:
     name: "Always Flying"
     description: "According to all known laws of aviation, there is no way a mob should be able to walk"
