@@ -1,1 +1,3 @@
 language: "en_us"
+
+vote_delay: 300 #in seconds, 0=disabled

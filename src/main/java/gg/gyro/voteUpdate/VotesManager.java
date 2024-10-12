@@ -29,13 +29,14 @@ public class VotesManager implements Listener {
 
     public VotesManager(Vote option1, Vote option2) {
         this.plugin = VoteUpdate.getInstance();
-        this.locales = Locales.getInstance();
+        locales = Locales.getInstance();
         this.option1 = option1;
         this.option2 = option2;
         this.votes = new HashMap<>();
         this.gui = Bukkit.createInventory(null, 9, Component.text(locales.get("gui.title")));
 
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
+        plugin.getLogger().info("Starting new votes ("+option1.getId()+" or "+option2.getId()+")");
         proposeVote();
     }
 
