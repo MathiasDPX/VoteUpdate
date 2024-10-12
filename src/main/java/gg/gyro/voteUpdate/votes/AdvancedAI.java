@@ -5,6 +5,7 @@ import gg.gyro.voteUpdate.VoteUpdate;
 import gg.gyro.voteUpdate.utils.Skull;
 import gg.gyro.voteUpdate.utils.Vote;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -43,7 +44,7 @@ public class AdvancedAI extends Vote {
 
     private void sendBipBoop(Player player) {
         Random random = new Random();
-        int delay = random.nextInt(300);
+        int delay = random.nextInt(300)+60;
 
         new BukkitRunnable() {
             @Override
@@ -59,9 +60,9 @@ public class AdvancedAI extends Vote {
         int random = new Random().nextInt(players.size());
         Player player = players.get(random);
 
-        Bukkit.getServer().broadcast(Component.text(Locales.getInstance().get("options.advanced_ai.broadcast").replace("%s", player.displayName().toString())));
+        Bukkit.getServer().broadcast(Component.text(Locales.getInstance().get("options.advanced_ai.broadcast").replace("%s", ((TextComponent) player.displayName()).content())));
 
-        player.displayName(Component.text("[BOT] ").append(player.displayName()));
+        player.displayName(Component.text("§7[BOT]§r ").append(player.displayName()));
 
         startBipBoopTask();
     }
