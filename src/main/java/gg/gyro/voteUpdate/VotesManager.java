@@ -64,11 +64,12 @@ public class VotesManager implements Listener {
         ItemMeta meta = item.getItemMeta();
 
         meta.displayName(Component.text(vote.getName()).color(NamedTextColor.GOLD));
-        meta.lore(List.of(
-                Component.text(TextReducer.reduceText(vote.getDescription(), 25)),
-                Component.empty(),
-                Component.text("Click to vote!").color(NamedTextColor.YELLOW)
-        ));
+        List<Component> lore = new ArrayList<>();
+        lore.addAll(TextReducer.reduceText(vote.getDescription(), 25));
+        lore.add(Component.empty());
+        lore.add(Component.text("Click to vote!").color(NamedTextColor.YELLOW));
+
+        meta.lore(lore);
 
         item.setItemMeta(meta);
         return item;

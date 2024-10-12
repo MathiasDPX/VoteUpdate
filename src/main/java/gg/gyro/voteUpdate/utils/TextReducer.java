@@ -1,34 +1,33 @@
 package gg.gyro.voteUpdate.utils;
 
-public class TextReducer {
-    public static String reduceText(String text, int maxSize) {
-        if (text == null || text.isEmpty() || maxSize <= 0) {
-            return "";
-        }
 
-        StringBuilder result = new StringBuilder();
-        String[] words = text.split("\\s+");
-        int currentLineLength = 0;
+import net.kyori.adventure.text.Component;
+
+import java.util.List;
+
+public class TextReducer {
+
+    public static List<Component> reduceText(String text, int maxSize) {
+        String[] words = text.split(" ");
+        List<Component> result = List.of();
+        StringBuilder line = new StringBuilder();
 
         for (String word : words) {
-            if (result.length() + word.length() > maxSize) {
-                break;
+            if (line.length() + word.length() + 1 > maxSize) {
+                result.add(Component.text(line.toString().trim()));
+                line = new StringBuilder();
             }
 
-            if (currentLineLength + word.length() > maxSize) {
-                result.append("\n");
-                currentLineLength = 0;
+            if (line.length() > 0) {
+                line.append(" ");
             }
-
-            if (currentLineLength > 0) {
-                result.append(" ");
-                currentLineLength++;
-            }
-
-            result.append(word);
-            currentLineLength += word.length();
+            line.append(word);
         }
 
-        return result.toString();
+        if (line.length() > 0) {
+            result.add(Component.text(line.toString().trim()));
+        }
+
+        return result;
     }
 }
