@@ -113,10 +113,10 @@ public class VotesManager implements Listener {
 
         if (votesOption1 > votesOption2) {
             resultMessage += "§a" + option1.getName() + " wins!";
-            option1.apply();
+            new BukkitRunnable() {@Override public void run() {option1.apply();}}.runTaskAsynchronously(VoteUpdate.getInstance());
         } else if (votesOption2 > votesOption1) {
             resultMessage += "§a" + option2.getName() + " wins!";
-            option2.apply();
+            new BukkitRunnable() {@Override public void run() {option2.apply();}}.runTaskAsynchronously(VoteUpdate.getInstance());
         } else {
             resultMessage += "§6It's a tie!";
         }

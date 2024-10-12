@@ -2,6 +2,7 @@
 
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
+import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import revxrsal.commands.bukkit.BukkitCommandHandler;
@@ -32,9 +33,9 @@ public final class VoteUpdate extends JavaPlugin {
 
     public static VoteUpdate getInstance() { return instance; }
 
-    public void registerEvents(Listener... args) {
+    public static void registerEvents(Listener... args) {
         for (Listener listener : args) {
-            getServer().getPluginManager().registerEvents(listener, this);
+            Bukkit.getServer().getPluginManager().registerEvents(listener, VoteUpdate.getInstance());
         }
     }
 }

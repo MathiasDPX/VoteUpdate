@@ -1,8 +1,6 @@
 package gg.gyro.voteUpdate.utils;
 
-import gg.gyro.voteUpdate.listeners.AlwaysFlying;
-import gg.gyro.voteUpdate.listeners.ChargedCreeper;
-import org.bukkit.Material;
+import gg.gyro.voteUpdate.votes.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +11,9 @@ public class Votes {
     static List<Vote> votes = new ArrayList<>();
 
     public Votes() {
-        votes.add(new Vote(Material.CREEPER_HEAD, "Charged Creepers", "All newly spawned creepers are charged.", new ChargedCreeper()));
-        votes.add(new Vote(Material.PHANTOM_MEMBRANE, "Always Flying", "According to all known laws of aviation, there is no way a mob should be able to walk", new AlwaysFlying()));
+        votes.add(new AlwaysFlying());
+        votes.add(new ChargedCreeper());
+        votes.add(new AdvancedAI());
     }
 
     public static Vote getById(String id) {
@@ -25,7 +24,7 @@ public class Votes {
     }
 
     public static Vote getVoteFromString(String name) {
-        if (Objects.equals(name, "?")) {
+        if (Objects.equals(name, "random")) {
             return getRandomVote();
         }
 

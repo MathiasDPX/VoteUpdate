@@ -3,6 +3,7 @@ package gg.gyro.voteUpdate;
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
 import org.bukkit.command.CommandSender;
+import org.bukkit.scheduler.BukkitRunnable;
 import revxrsal.commands.annotation.AutoComplete;
 import revxrsal.commands.annotation.Command;
 import revxrsal.commands.annotation.Named;
@@ -36,7 +37,7 @@ public class VotesCommands {
             return;
         }
 
-        sender.sendMessage("Forced to run \""+vote.getName()+"\"");
-        vote.apply();
+        sender.sendMessage("Forced to run "+vote.getName());
+        new BukkitRunnable() {@Override public void run() {vote.apply();}}.runTaskAsynchronously(VoteUpdate.getInstance());
     }
 }
