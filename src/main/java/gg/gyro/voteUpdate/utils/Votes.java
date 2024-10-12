@@ -14,6 +14,7 @@ public class Votes {
         votes.add(new AlwaysFlying());
         votes.add(new ChargedCreeper());
         votes.add(new AdvancedAI());
+        votes.add(new DefaultSheep());
     }
 
     public static Vote getById(String id) {

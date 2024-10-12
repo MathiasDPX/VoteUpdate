@@ -1,5 +1,6 @@
 package gg.gyro.voteUpdate.listeners;
 
+import gg.gyro.localeAPI.Locales;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.DyeColor;
@@ -15,7 +16,7 @@ public class DefaultSheep implements Listener {
 
     public DefaultSheep() {
         this.color = DyeColor.values()[new Random().nextInt(DyeColor.values().length)];
-        Bukkit.getServer().broadcast(Component.text("Sheep while now spawn "+color.name()));
+        Bukkit.getServer().broadcast(Component.text(Locales.getInstance().get("options.default_sheep.broadcast").replace("%color%", color.name().toLowerCase())));
     }
 
     @EventHandler

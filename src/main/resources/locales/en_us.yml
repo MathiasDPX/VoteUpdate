@@ -25,3 +25,7 @@ options:
   charged_creeper:
     name: "Charged Creeper"
     description: "Every new Creeper while be charged"
+  default_sheep:
+    name: "Default sheep color"
+    description: "New sheep will always have a randomly predefined color"
+    broadcast: "New sheep will be %color%"
