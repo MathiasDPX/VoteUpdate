@@ -121,7 +121,6 @@ public enum Skull {
      */
     public static ItemStack getCustomSkull(String url) {
         PlayerProfile profile = getProfile(url);
-        System.out.println(profile.getTextures().getSkin().toString());
         ItemStack head = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta meta = (SkullMeta) head.getItemMeta();
         meta.setOwnerProfile(profile); // Set the owning player of the head to the player profile
