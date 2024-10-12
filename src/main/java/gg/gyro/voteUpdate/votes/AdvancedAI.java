@@ -1,10 +1,10 @@
 package gg.gyro.voteUpdate.votes;
 
 import gg.gyro.voteUpdate.VoteUpdate;
+import gg.gyro.voteUpdate.utils.Skull;
 import gg.gyro.voteUpdate.utils.Vote;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -16,7 +16,7 @@ public class AdvancedAI extends Vote {
 
     @Override
     public ItemStack getIcon() {
-        return new ItemStack(Material.CREEPER_HEAD);
+        return Skull.getCustomSkull("http://textures.minecraft.net/texture/b369f1369958234d17e6b8c1ebf301475ab992f1a02bb946cf369894f61d1a53");
     }
 
     @Override
