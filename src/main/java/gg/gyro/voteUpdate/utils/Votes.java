@@ -2,19 +2,23 @@ package gg.gyro.voteUpdate.utils;
 
 import gg.gyro.voteUpdate.votes.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Random;
+import java.util.*;
 
 public class Votes {
     static List<Vote> votes = new ArrayList<>();
 
+    private void registerAll(Vote... v) {
+        votes.addAll(Arrays.asList(v));
+    }
+
     public Votes() {
-        votes.add(new AlwaysFlying());
-        votes.add(new ChargedCreeper());
-        votes.add(new AdvancedAI());
-        votes.add(new DefaultSheep());
+        registerAll(
+                new AlwaysFlying(),
+                new ChargedCreeper(),
+                new AdvancedAI(),
+                new DefaultSheep(),
+                new BedPVP()
+        );
     }
 
     public static Vote getById(String id) {

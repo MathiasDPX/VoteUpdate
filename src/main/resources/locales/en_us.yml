@@ -29,3 +29,6 @@ options:
     name: "Default sheep color"
     description: "New sheep will always have a randomly predefined color"
     broadcast: "New sheep will be %color%"
+  bed_pvp:
+    name: "Bed PVP"
+    description: "All beds deal 3.5 hearts of damage and explode when used as a weapon."
