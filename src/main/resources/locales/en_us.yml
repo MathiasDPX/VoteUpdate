@@ -38,3 +38,7 @@ options:
     broadcast: "%gr% has been flip to %value%"
     true: "true"
     false: "false"
+  egg_free:
+    name: "Egg Free"
+    description: "Chicken while drop a random item instead of eggs"
+    broadcast: "Chicken will lay %material% instead of eggs"
