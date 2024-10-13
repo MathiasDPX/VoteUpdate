@@ -18,6 +18,7 @@ public final class VoteUpdate extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        saveDefaultConfig();
         new Votes();
 
         Locales.saveDefaultConfig(this, "en_us.yml");
