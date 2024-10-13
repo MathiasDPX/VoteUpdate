@@ -45,6 +45,6 @@ public class VotesCommands {
 
         sender.sendMessage(locales.get("commands.force_voteresult").replace("%s",vote.getName()));
         VoteUpdate.getInstance().getLogger().info("Applying "+vote.getId()+" vote");
-        new BukkitRunnable() {@Override public void run() {vote.apply();}}.runTaskAsynchronously(VoteUpdate.getInstance());
+        vote.apply();
     }
 }

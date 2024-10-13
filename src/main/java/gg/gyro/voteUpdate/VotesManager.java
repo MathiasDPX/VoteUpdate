@@ -118,11 +118,11 @@ public class VotesManager implements Listener {
         if (votesOption1 > votesOption2) {
             resultMessage += locales.get("votes.result_winner").replace("%s", option1.getName());
             VoteUpdate.getInstance().getLogger().info("Applying "+option1.getId()+" vote");
-            new BukkitRunnable() {@Override public void run() {option1.apply();}}.runTaskAsynchronously(VoteUpdate.getInstance());
+            option1.apply();
         } else if (votesOption2 > votesOption1) {
             resultMessage += locales.get("votes.result_winner").replace("%s", option2.getName());
             VoteUpdate.getInstance().getLogger().info("Applying "+option2.getId()+" vote");
-            new BukkitRunnable() {@Override public void run() {option2.apply();}}.runTaskAsynchronously(VoteUpdate.getInstance());
+            option2.apply();
         } else {
             resultMessage += locales.get("votes.result_tie");
         }

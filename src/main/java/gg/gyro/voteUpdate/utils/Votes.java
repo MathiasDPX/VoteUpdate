@@ -17,7 +17,8 @@ public class Votes {
                 new ChargedCreeper(),
                 new AdvancedAI(),
                 new DefaultSheep(),
-                new BedPVP()
+                new BedPVP(),
+                new BinaryGameruleFlip()
         );
     }
 

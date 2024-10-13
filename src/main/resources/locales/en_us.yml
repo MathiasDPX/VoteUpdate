@@ -32,3 +32,9 @@ options:
   bed_pvp:
     name: "Bed PVP"
     description: "All beds deal 3.5 hearts of damage and explode when used as a weapon."
+  binary_gamerule_flip:
+    name: "Binary Gamerule Flip"
+    description: "Flip a random binary gamerule"
+    broadcast: "%gr% has been flip to %value%"
+    true: "true"
+    false: "false"
