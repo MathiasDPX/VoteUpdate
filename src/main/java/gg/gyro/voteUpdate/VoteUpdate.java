@@ -19,10 +19,11 @@ public final class VoteUpdate extends JavaPlugin {
     public void onEnable() {
         instance = this;
         saveDefaultConfig();
-        new Votes();
-
         Locales.saveDefaultConfig(this, "en_us.yml");
         new Locales(this, getConfig().getString("language"));
+
+        new Votes();
+
         BukkitCommandHandler handler = BukkitCommandHandler.create(this);
 
         handler.getAutoCompleter().registerSuggestion("votes", (args, sender, command) -> {

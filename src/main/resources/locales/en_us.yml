@@ -42,3 +42,6 @@ options:
     name: "Egg Free"
     description: "Chicken while drop a random item instead of eggs"
     broadcast: "Chicken will lay %material% instead of eggs"
+  fish_anything:
+    name: "Fish Anything"
+    description: "Fishing will give you a random item"

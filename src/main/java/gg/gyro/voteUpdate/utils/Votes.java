@@ -1,6 +1,7 @@
 package gg.gyro.voteUpdate.utils;
 
 import gg.gyro.voteUpdate.votes.*;
+
 import java.util.*;
 
 public class Votes {
@@ -18,7 +19,8 @@ public class Votes {
                 new DefaultSheep(),
                 new BedPVP(),
                 new BinaryGameruleFlip(),
-                new EggFree()
+                new EggFree(),
+                new FishAnything()
         );
     }
 
