@@ -20,7 +20,8 @@ public class Votes {
                 new BedPVP(),
                 new BinaryGameruleFlip(),
                 new EggFree(),
-                new FishAnything()
+                new FishAnything(),
+                new FrenchMode()
         );
     }
 

@@ -45,3 +45,6 @@ options:
   fish_anything:
     name: "Fish Anything"
     description: "Fishing will give you a random item"
+  french_mode:
+    name: "French Mode"
+    description: "Turn everyone into a Frenchman"

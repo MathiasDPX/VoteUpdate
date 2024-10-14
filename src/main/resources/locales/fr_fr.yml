@@ -1,0 +1,50 @@
+commands:
+  vote_notfound: "Impossible de trouver le vote nommé %s"
+  force_voteresult: "Force l'éxécution de %s"
+
+votes:
+  already_voted: "Tu as déjà voté!"
+  success_vote: "Tu as voté pour %s"
+  result_title: "§6Resultats du vote:"
+  result_vote: "§e%name%: §f%amount% votes"
+  result_winner: "§a%s a gagné!"
+  result_tie: "§6C'est une égalité!"
+
+gui:
+  click_to_vote: "Cliquer pour voter!"
+  title: "L'Heure du Vote"
+
+options:
+  advanced_ai:
+    name: "IA Avancée"
+    description: "Remplace un joueur par un modèle d'IA avancée"
+    broadcast: "%s est devenu une IA avancée"
+  always_flying:
+    name: "Toujours en vol"
+    description: "Selon toutes les lois connues de l’aviation, il est impossible qu’un mob soit capable de voler."
+  charged_creeper:
+    name: "Creeper chargé"
+    description: "Tout les nouveaux creepers seront chargés"
+  default_sheep:
+    name: "Couleur de mouton par défaut"
+    description: "Les nouveaux moutons seront d'une couleur aléatoires"
+    broadcast: "Les nouveaux moutons seront %color%"
+  bed_pvp:
+    name: "PVP Lit"
+    description: "Tout les lits font 3.5 coeurs de dégats et explose à l'utilisation"
+  binary_gamerule_flip:
+    name: "Changement d'une règle du jeu binaire"
+    description: "Change une règle du jeu aléatoire"
+    broadcast: "%gr% a été changé sur %value%"
+    true: "vrai"
+    false: "faux"
+  egg_free:
+    name: "Libroeuf"
+    description: "Chicken while drop a random item instead of eggs"
+    broadcast: "Chicken will lay %material% instead of eggs"
+  fish_anything:
+    name: "Pécher tout et n'importe quoi"
+    description: "Pêcher n'importe quel item"
+  french_mode:
+    name: "Mode Français"
+    description: "Change tout le monde en français"

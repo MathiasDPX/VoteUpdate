@@ -20,6 +20,7 @@ public final class VoteUpdate extends JavaPlugin {
         instance = this;
         saveDefaultConfig();
         Locales.saveDefaultConfig(this, "en_us.yml");
+        Locales.saveDefaultConfig(this, "fr_fr.yml");
         new Locales(this, getConfig().getString("language"));
 
         new Votes();
