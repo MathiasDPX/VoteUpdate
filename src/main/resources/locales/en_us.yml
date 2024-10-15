@@ -54,3 +54,7 @@ options:
   disable_shield:
     name: "Disable Shield"
     description: "Shields are disabled"
+  perma_effect:
+    name: "Perma Effect"
+    description: "Apply a random effect to all players"
+    broadcast: "Everyone now has the effect %effect% at level %level%"

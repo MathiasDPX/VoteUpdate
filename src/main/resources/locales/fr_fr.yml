@@ -54,3 +54,7 @@ options:
   disable_shield:
     name: "Désactiver les boucliers"
     description: "Les boucliers ne peuvent plus bloquer"
+  perma_effect:
+    name: "Effet permanent"
+    description: "Applique un effet permanent à tout les joueurs"
+    broadcast: "Tout les joueurs ont maintenant l'effet %effect% de niveau %level%"

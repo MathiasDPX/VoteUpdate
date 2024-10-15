@@ -22,7 +22,8 @@ public class Votes {
                 new EggFree(),
                 new FishAnything(),
                 new FrenchMode(),
-                new DisableShield()
+                new DisableShield(),
+                new PermaEffect()
         );
     }
 
