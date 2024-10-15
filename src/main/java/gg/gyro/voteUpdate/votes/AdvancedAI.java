@@ -18,7 +18,7 @@ public class AdvancedAI extends Vote {
 
     @Override
     public ItemStack getIcon() {
-        return Skull.getCustomSkull("http://textures.minecraft.net/texture/b369f1369958234d17e6b8c1ebf301475ab992f1a02bb946cf369894f61d1a53");
+        return Skull.getCustomSkull("https://textures.minecraft.net/texture/b369f1369958234d17e6b8c1ebf301475ab992f1a02bb946cf369894f61d1a53");
     }
 
     @Override

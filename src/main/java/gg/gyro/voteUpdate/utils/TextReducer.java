@@ -19,13 +19,13 @@ public class TextReducer {
                 line = new StringBuilder();
             }
 
-            if (line.length() > 0) {
+            if (!line.isEmpty()) {
                 line.append(" ");
             }
             line.append(word);
         }
 
-        if (line.length() > 0) {
+        if (!line.isEmpty()) {
             result.add(Component.text(line.toString().trim()));
         }
 

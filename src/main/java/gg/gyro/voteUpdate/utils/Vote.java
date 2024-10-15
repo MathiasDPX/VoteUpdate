@@ -3,7 +3,7 @@ package gg.gyro.voteUpdate.utils;
 import org.bukkit.inventory.ItemStack;
 
 public abstract class Vote {
-    String id;
+    private final String id;
     public Vote() {
         this.id = getName().toLowerCase().replace(" ", "_");
     }
