@@ -13,6 +13,9 @@ votes:
 gui:
   click_to_vote: "Click to vote!"
   title: "Vote Time!"
+  next_page: "Next Page"
+  previous_page: "Previous Page"
+  close: "Close"
 
 options:
   advanced_ai:

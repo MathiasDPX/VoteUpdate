@@ -1,6 +1,7 @@
  package gg.gyro.voteUpdate;
 
 import gg.gyro.localeAPI.Locales;
+import gg.gyro.voteUpdate.commands.*;
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
 import org.bukkit.Bukkit;
@@ -35,7 +36,11 @@ public final class VoteUpdate extends JavaPlugin {
             return suggestions;
         });
 
-        handler.register(new VotesCommands());
+        handler.register(
+                new AskVote(),
+                new ForceVote(),
+                new ListVotes()
+        );
 
         if (getConfig().getInt("vote_delay") == 0) {
             getLogger().info("Automatics votes are disabled");

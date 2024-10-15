@@ -13,6 +13,9 @@ votes:
 gui:
   click_to_vote: "Cliquer pour voter!"
   title: "L'Heure du Vote"
+  next_page: "Page suivante"
+  previous_page: "Page précédente"
+  close: "Fermer"
 
 options:
   advanced_ai:
