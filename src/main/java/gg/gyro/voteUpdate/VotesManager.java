@@ -11,6 +11,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -76,6 +77,16 @@ public class VotesManager implements Listener {
 
         item.setItemMeta(meta);
         return item;
+    }
+
+    @EventHandler
+    public void onInventoryClose(InventoryCloseEvent event) {
+        if (!event.getInventory().equals(gui)) return;
+        if (!(event.getPlayer() instanceof Player player)) return;
+
+        if (!votes.containsKey(player.getUniqueId())) {
+            Bukkit.getScheduler().runTaskLater(VoteUpdate.getInstance(), () -> player.openInventory(gui), 1);
+        }
     }
 
     @EventHandler
