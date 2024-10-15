@@ -21,5 +21,7 @@ public class BedPVP implements Listener {
         if (!isBed(player.getInventory().getItemInMainHand().getType())) return;
 
         e.setDamage(3.5);
+
+        player.getWorld().createExplosion(player.getLocation(), 5.0f, true);
     }
 }
