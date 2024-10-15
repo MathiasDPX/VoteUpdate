@@ -48,3 +48,6 @@ options:
   french_mode:
     name: "Mode Français"
     description: "Change tout le monde en français"
+  disable_shield:
+    name: "Désactiver les boucliers"
+    description: "Les boucliers ne peuvent plus bloquer"

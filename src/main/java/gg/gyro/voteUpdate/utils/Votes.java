@@ -21,7 +21,8 @@ public class Votes {
                 new BinaryGameruleFlip(),
                 new EggFree(),
                 new FishAnything(),
-                new FrenchMode()
+                new FrenchMode(),
+                new DisableShield()
         );
     }
 

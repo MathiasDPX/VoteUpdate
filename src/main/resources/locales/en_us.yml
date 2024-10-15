@@ -48,3 +48,6 @@ options:
   french_mode:
     name: "French Mode"
     description: "Turn everyone into a Frenchman"
+  disable_shield:
+    name: "Disable Shield"
+    description: "Shields are disabled"
