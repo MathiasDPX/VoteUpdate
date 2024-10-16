@@ -58,3 +58,6 @@ options:
     name: "Effet permanent"
     description: "Applique un effet permanent à tout les joueurs"
     broadcast: "Tout les joueurs ont maintenant l'effet %effect% de niveau %level%"
+  pot_gems:
+    name: "Pot de gemme"
+    description: "Tout les pots vous donneront des émeraudes"

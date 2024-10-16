@@ -23,7 +23,8 @@ public class Votes {
                 new FishAnything(),
                 new FrenchMode(),
                 new DisableShield(),
-                new PermaEffect()
+                new PermaEffect(),
+                new PotGems()
         );
     }
 

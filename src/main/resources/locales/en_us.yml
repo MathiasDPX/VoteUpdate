@@ -58,3 +58,6 @@ options:
     name: "Perma Effect"
     description: "Apply a random effect to all players"
     broadcast: "Everyone now has the effect %effect% at level %level%"
+  pot_gems:
+    name: "Pot of Gems"
+    description: "Every pot will give you emeralds"
