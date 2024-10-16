@@ -5,6 +5,7 @@ import gg.gyro.voteUpdate.utils.TextReducer;
 import gg.gyro.voteUpdate.utils.Vote;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
+import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -71,7 +72,7 @@ public class VotesManager implements Listener {
         meta.displayName(Component.text(vote.getName()).color(NamedTextColor.GOLD));
         List<Component> lore = new ArrayList<>(TextReducer.reduceText(vote.getDescription(), 25));
         lore.add(Component.empty());
-        lore.add(Component.text(locales.get("gui.click_to_vote")).color(NamedTextColor.YELLOW));
+        lore.add(Component.text(locales.get("gui.click_to_vote")).color(NamedTextColor.YELLOW).decoration(TextDecoration.ITALIC, false));
 
         meta.lore(lore);
 
