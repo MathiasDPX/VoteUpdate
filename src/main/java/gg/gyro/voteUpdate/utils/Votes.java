@@ -24,7 +24,8 @@ public class Votes {
                 new FrenchMode(),
                 new DisableShield(),
                 new PermaEffect(),
-                new PotGems()
+                new PotGems(),
+                new MidasTouch()
         );
     }
 

@@ -10,6 +10,9 @@ votes:
   result_winner: "§a%s a gagné!"
   result_tie: "§6C'est une égalité!"
 
+death_messages:
+  midas_touch: "%player_name% a été transformé en or"
+
 gui:
   click_to_vote: "Cliquer pour voter!"
   title: "L'Heure du Vote"
@@ -61,3 +64,6 @@ options:
   pot_gems:
     name: "Pot de gemme"
     description: "Tout les pots vous donneront des émeraudes"
+  midas_touch:
+    name: "Toucher de Midas"
+    description: "Tout ce que vous touchez deviendra de l'or"

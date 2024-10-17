@@ -10,6 +10,9 @@ votes:
   result_winner: "§a%s wins!"
   result_tie: "§6It's a tie!"
 
+death_messages:
+  midas_touch: "%player_name% was turned into gold"
+
 gui:
   click_to_vote: "Click to vote!"
   title: "Vote Time!"
@@ -61,3 +64,6 @@ options:
   pot_gems:
     name: "Pot of Gems"
     description: "Every pot will give you emeralds"
+  midas_touch:
+    name: "Midas Touch"
+    description: "Everything you touch turns into gold"

@@ -34,6 +34,11 @@ dependencies {
     implementation("gg.gyro:LocaleAPI:snapshot")
     implementation('com.github.Revxrsal.Lamp:common:3.2.1')
     implementation('com.github.Revxrsal.Lamp:bukkit:3.2.1')
+
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+    testCompileOnly 'org.projectlombok:lombok:1.18.34'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
 }
 
 def targetJavaVersion = 21
