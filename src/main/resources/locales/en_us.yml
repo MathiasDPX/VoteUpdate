@@ -67,3 +67,6 @@ options:
   midas_touch:
     name: "Midas Touch"
     description: "Everything you touch turns into gold"
+  god_of_lightning:
+    name: "God of Lightning"
+    description: "Become able to summon lightning"

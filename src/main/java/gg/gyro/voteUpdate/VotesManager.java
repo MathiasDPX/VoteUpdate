@@ -72,7 +72,7 @@ public class VotesManager implements Listener {
         ItemStack item = vote.getIcon().clone();
         ItemMeta meta = item.getItemMeta();
 
-        meta.displayName(Component.text(vote.getName()).color(NamedTextColor.GOLD));
+        meta.displayName(Component.text(vote.getName()).color(NamedTextColor.GOLD).decoration(TextDecoration.ITALIC, false).decoration(TextDecoration.BOLD, true));
         List<Component> lore = new ArrayList<>(TextReducer.reduceText(vote.getDescription(), 25));
         lore.add(Component.empty());
         lore.add(Component.text(locales.get("gui.click_to_vote")).color(NamedTextColor.YELLOW).decoration(TextDecoration.ITALIC, false));

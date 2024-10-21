@@ -67,3 +67,6 @@ options:
   midas_touch:
     name: "Toucher de Midas"
     description: "Tout ce que vous touchez deviendra de l'or"
+  god_of_lightning:
+    name: "Dieu de la foudre"
+    description: "Deviens capable de faire apparaitre la foudre"

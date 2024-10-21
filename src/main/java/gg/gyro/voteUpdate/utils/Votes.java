@@ -26,7 +26,8 @@ public class Votes {
                 new DisableShield(),
                 new PermaEffect(),
                 new PotGems(),
-                new MidasTouch()
+                new MidasTouch(),
+                new GodOfLightning()
         );
     }
 
