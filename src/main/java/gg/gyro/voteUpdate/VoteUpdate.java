@@ -2,8 +2,10 @@
 
 import gg.gyro.localeAPI.Locales;
 import gg.gyro.voteUpdate.commands.*;
+import gg.gyro.voteUpdate.customitems.CustomItemsUtils;
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
+import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -14,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class VoteUpdate extends JavaPlugin {
+    @Getter
     static VoteUpdate instance;
 
     @Override
@@ -27,7 +30,6 @@ public final class VoteUpdate extends JavaPlugin {
         new Votes();
 
         BukkitCommandHandler handler = BukkitCommandHandler.create(this);
-
         handler.getAutoCompleter().registerSuggestion("votes", (args, sender, command) -> {
             List<String> suggestions = new ArrayList<>(List.of("random"));
             for (Vote vote: Votes.getVotes()){
@@ -53,8 +55,6 @@ public final class VoteUpdate extends JavaPlugin {
             }.runTaskTimer(this, 0, getConfig().getInt("vote_delay")*20L);
         }
     }
-
-    public static VoteUpdate getInstance() { return instance; }
 
     public static void registerEvents(Listener... args) {
         for (Listener listener : args) {
