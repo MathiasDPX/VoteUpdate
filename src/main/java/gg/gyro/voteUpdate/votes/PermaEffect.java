@@ -7,22 +7,15 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import org.bukkit.potion.PotionType;
 
 import java.util.Random;
 
 public class PermaEffect extends Vote {
     @Override
     public ItemStack getIcon() {
-        ItemStack icon = new ItemStack(Material.GLASS_BOTTLE);
-
-        PotionMeta meta = (PotionMeta) icon.getItemMeta();
-        meta.setBasePotionType(PotionType.WATER);
-        icon.setItemMeta(meta);
-        return icon;
+        return new ItemStack(Material.GLASS_BOTTLE);
     }
 
     @Override
