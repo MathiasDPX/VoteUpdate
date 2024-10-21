@@ -26,7 +26,7 @@ public class BinaryGameruleFlip extends Vote {
 
     @Override
     public ItemStack getIcon() {
-        return Skull.getCustomSkull("http://textures.minecraft.net/texture/dcafbac5068197fda18636dfc4ce7f9df5af9b2a06e6f91e38ae35e4c435b2df");
+        return Skull.getCustomSkull("https://textures.minecraft.net/texture/dcafbac5068197fda18636dfc4ce7f9df5af9b2a06e6f91e38ae35e4c435b2df");
     }
 
     @Override

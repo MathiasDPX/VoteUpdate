@@ -58,7 +58,7 @@ public enum Skull {
     private static final Base64 base64 = new Base64();
     private String id;
 
-    private Skull(String id) {
+    Skull(String id) {
         this.id = id;
     }
 

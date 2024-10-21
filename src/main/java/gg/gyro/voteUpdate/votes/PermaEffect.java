@@ -1,7 +1,6 @@
 package gg.gyro.voteUpdate.votes;
 
 import gg.gyro.localeAPI.Locales;
-import gg.gyro.voteUpdate.VoteUpdate;
 import gg.gyro.voteUpdate.utils.Vote;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;

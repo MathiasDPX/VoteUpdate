@@ -5,7 +5,6 @@ import gg.gyro.voteUpdate.utils.NSKeyManager;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Item;

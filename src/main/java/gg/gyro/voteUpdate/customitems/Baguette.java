@@ -3,22 +3,11 @@ package gg.gyro.voteUpdate.customitems;
 import dev.lone.itemsadder.api.CustomStack;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextDecoration;
-import org.bukkit.DyeColor;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.block.banner.Pattern;
-import org.bukkit.block.banner.PatternType;
-import org.bukkit.inventory.EquipmentSlot;
-import org.bukkit.inventory.EquipmentSlotGroup;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.BannerMeta;
 import org.bukkit.inventory.meta.ItemMeta;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 
 public class Baguette extends CustomItem {
     @Override
