@@ -2,7 +2,6 @@
 
 import gg.gyro.localeAPI.Locales;
 import gg.gyro.voteUpdate.commands.*;
-import gg.gyro.voteUpdate.customitems.CustomItemsUtils;
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
 import lombok.Getter;
@@ -16,8 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class VoteUpdate extends JavaPlugin {
-    @Getter
-    static VoteUpdate instance;
+    @Getter static VoteUpdate instance;
 
     @Override
     public void onEnable() {

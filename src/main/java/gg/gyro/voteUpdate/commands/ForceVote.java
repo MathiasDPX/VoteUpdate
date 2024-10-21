@@ -2,8 +2,10 @@ package gg.gyro.voteUpdate.commands;
 
 import gg.gyro.localeAPI.Locales;
 import gg.gyro.voteUpdate.VoteUpdate;
+import gg.gyro.voteUpdate.events.ApplyVoteEvent;
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import revxrsal.commands.annotation.AutoComplete;
 import revxrsal.commands.annotation.Command;
@@ -29,6 +31,8 @@ public class ForceVote {
 
         sender.sendMessage(locales.get("commands.force_voteresult").replace("%s",vote.getName()));
         VoteUpdate.getInstance().getLogger().info("Applying "+vote.getId()+" vote");
+
+        Bukkit.getPluginManager().callEvent(new ApplyVoteEvent(vote, ApplyVoteEvent.ApplyCause.FORCE));
         vote.apply();
     }
 }

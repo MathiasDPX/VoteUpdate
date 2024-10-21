@@ -1,6 +1,9 @@
 package gg.gyro.voteUpdate;
 
 import gg.gyro.localeAPI.Locales;
+import gg.gyro.voteUpdate.events.ApplyVoteEvent;
+import gg.gyro.voteUpdate.events.PlayerVoteEvent;
+import gg.gyro.voteUpdate.events.VoteEndEvent;
 import gg.gyro.voteUpdate.utils.TextReducer;
 import gg.gyro.voteUpdate.utils.Vote;
 import net.kyori.adventure.text.Component;
@@ -111,9 +114,15 @@ public class VotesManager implements Listener {
 
     private void handleVote(Player voter, int option) {
         if (!votes.containsKey(voter.getUniqueId())) {
-            voter.playSound(voter.getEyeLocation(), Sound.BLOCK_NOTE_BLOCK_BIT, 1, 1);
             votes.put(voter.getUniqueId(), option);
+            voter.playSound(voter.getEyeLocation(), Sound.BLOCK_NOTE_BLOCK_BIT, 1, 1);
             voter.sendMessage(locales.get("votes.success_vote").replace("%s", String.valueOf(option)));
+
+            if (option == 1) {
+                Bukkit.getPluginManager().callEvent(new PlayerVoteEvent(option1, voter));
+            } else {
+                Bukkit.getPluginManager().callEvent(new PlayerVoteEvent(option2, voter));
+            }
         } else {
             voter.sendMessage(locales.get("votes.already_voted"));
         }
@@ -128,19 +137,31 @@ public class VotesManager implements Listener {
                 locales.get("votes.result_vote").replace("%name%", option2.getName()).replace("%amount%", String.valueOf(votesOption2))+"\n";
 
         if (votesOption1 > votesOption2) {
+            triggerEvents(option1, option2);
+
             resultMessage += locales.get("votes.result_winner").replace("%s", option1.getName());
             VoteUpdate.getInstance().getLogger().info("Applying "+option1.getId()+" vote");
+
             option1.apply();
         } else if (votesOption2 > votesOption1) {
+            triggerEvents(option2, option1);
+
             resultMessage += locales.get("votes.result_winner").replace("%s", option2.getName());
             VoteUpdate.getInstance().getLogger().info("Applying "+option2.getId()+" vote");
+
             option2.apply();
         } else {
+            Bukkit.getPluginManager().callEvent(new VoteEndEvent(option1, option2, votes.keySet(), true));
             resultMessage += locales.get("votes.result_tie");
         }
 
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.sendMessage(resultMessage);
         }
+    }
+
+    private void triggerEvents(Vote win, Vote lose) {
+        Bukkit.getPluginManager().callEvent(new VoteEndEvent(win, lose, votes.keySet(), false));
+        Bukkit.getPluginManager().callEvent(new ApplyVoteEvent(win, ApplyVoteEvent.ApplyCause.AUTOMATIC));
     }
 }

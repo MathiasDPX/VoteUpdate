@@ -2,8 +2,10 @@ package gg.gyro.voteUpdate.commands;
 
 import gg.gyro.localeAPI.Locales;
 import gg.gyro.voteUpdate.VotesManager;
+import gg.gyro.voteUpdate.events.VoteStartEvent;
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import revxrsal.commands.annotation.AutoComplete;
 import revxrsal.commands.annotation.Command;
@@ -34,6 +36,7 @@ public class AskVote {
             return;
         }
 
+        Bukkit.getPluginManager().callEvent(new VoteStartEvent(vote1, vote2, VoteStartEvent.StartCause.FORCE));
         new VotesManager(vote1, vote2);
     }
 }
