@@ -12,10 +12,6 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 public class GodOfLightning implements Listener {
 
-    public boolean isBed(Material material) {
-        return material.name().toLowerCase().contains("bed");
-    }
-
     private void spawnLightning(Location loc) {
         loc.getWorld().strikeLightning(loc);
     }
