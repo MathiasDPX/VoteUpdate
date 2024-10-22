@@ -1,6 +1,5 @@
 package gg.gyro.voteUpdate.utils;
 
-
 import net.kyori.adventure.text.Component;
 
 import java.util.ArrayList;
