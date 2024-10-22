@@ -70,3 +70,6 @@ options:
   god_of_lightning:
     name: "Dieu de la foudre"
     description: "Deviens capable de faire apparaitre la foudre"
+  transparent_players:
+    name: "Joueurs transparents"
+    description: "Tout les joueurs deviennent transparents"

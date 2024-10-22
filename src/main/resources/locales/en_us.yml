@@ -70,3 +70,6 @@ options:
   god_of_lightning:
     name: "God of Lightning"
     description: "Become able to summon lightning"
+  transparent_players:
+    name: "Transparent Players"
+    description: "Players are now transparent"

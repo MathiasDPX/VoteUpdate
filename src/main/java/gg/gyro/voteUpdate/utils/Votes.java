@@ -27,7 +27,8 @@ public class Votes {
                 new PermaEffect(),
                 new PotGems(),
                 new MidasTouch(),
-                new GodOfLightning()
+                new GodOfLightning(),
+                new TransparentPlayers()
         );
     }
 
