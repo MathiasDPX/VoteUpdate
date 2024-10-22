@@ -1,5 +1,6 @@
  package gg.gyro.voteUpdate;
 
+import dev.xernas.menulib.MenuLib;
 import gg.gyro.localeAPI.Locales;
 import gg.gyro.voteUpdate.commands.*;
 import gg.gyro.voteUpdate.utils.Vote;
@@ -23,6 +24,8 @@ public final class VoteUpdate extends JavaPlugin {
         saveDefaultConfig();
         Locales.saveDefaultConfig(this, "en_us.yml");
         Locales.saveDefaultConfig(this, "fr_fr.yml");
+
+        MenuLib.init(this);
         new Locales(this, getConfig().getString("language"));
 
         new Votes();
@@ -38,7 +41,8 @@ public final class VoteUpdate extends JavaPlugin {
 
         handler.register(
                 new AskVote(),
-                new ForceVote()
+                new ForceVote(),
+                new ListVotes()
         );
 
         if (getConfig().getInt("vote_delay") == 0) {
