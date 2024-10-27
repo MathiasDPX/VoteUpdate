@@ -2,6 +2,7 @@ commands:
   vote_notfound: "Impossible de trouver le vote nommé %s"
   force_voteresult: "Force l'éxécution de %s"
   sender_not_player: "Seul les joueurs peuvent utiliser cette commande"
+  undo: "Annulation de %vote%"
 
 votes:
   already_voted: "Tu as déjà voté!"

@@ -42,7 +42,8 @@ public final class VoteUpdate extends JavaPlugin {
         handler.register(
                 new AskVote(),
                 new ForceVote(),
-                new ListVotes()
+                new ListVotes(),
+                new UndoCommand()
         );
 
         if (getConfig().getInt("vote_delay") == 0) {

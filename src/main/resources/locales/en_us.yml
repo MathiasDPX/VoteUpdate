@@ -2,6 +2,7 @@ commands:
   vote_notfound: "Unable to find vote with name %s"
   force_voteresult: "Forced to run %s"
   sender_not_player: "Only players can use this command"
+  undo: "Undoing vote %vote%"
 
 votes:
   already_voted: "You have already voted!"
