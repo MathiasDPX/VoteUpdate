@@ -74,3 +74,6 @@ options:
   transparent_players:
     name: "Joueurs transparents"
     description: "Tout les joueurs deviennent transparents"
+  less_gravity:
+    name: "Gravité lunaire"
+    description: "La gravité est équivalente à celle de la lune"

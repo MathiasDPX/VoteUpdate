@@ -74,3 +74,6 @@ options:
   transparent_players:
     name: "Transparent Players"
     description: "Players are now transparent"
+  less_gravity:
+    name: "Moon Gravity"
+    description: "Gravity is reduced to moon levels"

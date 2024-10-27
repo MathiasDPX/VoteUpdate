@@ -28,7 +28,8 @@ public class Votes {
                 new PotGems(),
                 new MidasTouch(),
                 new GodOfLightning(),
-                new TransparentPlayers()
+                new TransparentPlayers(),
+                new LessGravity()
         );
     }
 
