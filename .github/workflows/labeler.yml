@@ -1,0 +1,40 @@
+name: Labeler
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - wiki
+      - master
+
+jobs:
+  add-labels:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Add labels based on target branch
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const targetBranch = context.payload.pull_request.base.ref;
+            const prNumber = context.payload.pull_request.number;
+            
+            let labelToAdd = '';
+            if (targetBranch === 'wiki') {
+              labelToAdd = 'wiki';
+            } else if (targetBranch === 'master') {
+              labelToAdd = 'plugin';
+            }
+            
+            if (labelToAdd) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                labels: [labelToAdd]
+              });
+              console.log(`Added ${labelToAdd} label to PR #${prNumber}`);
+            }
