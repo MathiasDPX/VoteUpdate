@@ -1,5 +1,0 @@
-wiki:
- - base-branch: 'wiki'
-
-plugin:
- - base-branch: 'master'
