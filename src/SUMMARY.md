@@ -1,0 +1,27 @@
+# Summary
+
+[Introduction](./introduction.md)
+
+- [Commands](./commands/index.md)
+  - [List](./commands/list.md)
+  - [Ask](./commands/ask.md)
+  - [Force](./commands/force.md)
+  - [Undo](./commands/undo.md)
+
+- [Votes]()
+  - [Advanced AI]()
+  - [Always Flying]()
+  - [Bed PVP]()
+  - [Binary Gamerule Flip]()
+  - [Charged Creeper]()
+  - [Default Sheep]()
+  - [Disable Shields]()
+  - [Egg Free]()
+  - [Fish Anyting]()
+  - [French Mode]()
+  - [God of Lightning]()
+  - [Less Gravity]()
+  - [Midas Touch]()
+  - [Perma Effect]()
+  - [Pot of Gems]()
+  - [Transparent Players]()
