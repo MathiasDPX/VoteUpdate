@@ -9,6 +9,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import revxrsal.commands.annotation.AutoComplete;
 import revxrsal.commands.annotation.Command;
+import revxrsal.commands.annotation.Description;
 import revxrsal.commands.annotation.Named;
 import revxrsal.commands.bukkit.annotation.CommandPermission;
 
@@ -21,6 +22,7 @@ public class ForceVote {
 
     @Command("votes force")
     @AutoComplete("@votes")
+    @Description("Forces a vote to be applied")
     @CommandPermission("votes.commands.force")
     public void force(CommandSender sender, @Named("force") String forcedVote) {
         Vote vote = Votes.getVoteFromString(forcedVote);

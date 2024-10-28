@@ -10,6 +10,7 @@ import gg.gyro.voteUpdate.utils.TextReducer;
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -49,7 +50,11 @@ public class ListMenu extends PaginatedMenu {
 
             ItemMeta meta = icon.getItemMeta();
             meta.displayName(Component.text(vote.getName()).decoration(TextDecoration.ITALIC, false));
-            meta.lore(TextReducer.reduceText(vote.getDescription(), 25));
+            List<Component> lore = TextReducer.reduceText(vote.getDescription(), 25);
+            lore.add(Component.empty());
+            lore.add(Component.text(vote.getId()).color(NamedTextColor.GRAY).decoration(TextDecoration.ITALIC, false));
+
+            meta.lore(lore);
             icon.setItemMeta(meta);
 
             items.add(icon);

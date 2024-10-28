@@ -1,7 +1,9 @@
 package gg.gyro.voteUpdate.utils;
 
+import gg.gyro.voteUpdate.VoteUpdate;
 import gg.gyro.voteUpdate.votes.*;
 import lombok.Getter;
+import org.bukkit.configuration.file.FileConfiguration;
 
 import java.util.*;
 
@@ -49,7 +51,12 @@ public class Votes {
     }
 
     public static Vote getRandomVote() {
+        FileConfiguration conf = VoteUpdate.getInstance().getConfig();
         Random random = new Random();
-        return votes.get(random.nextInt(votes.size()));
+        Vote vote = votes.get(random.nextInt(votes.size()));
+        if (!conf.getStringList("disabled_votes").contains(vote.getId())) {
+            return getRandomVote();
+        }
+        return vote;
     }
 }

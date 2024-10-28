@@ -49,6 +49,7 @@ public class VotesManager implements Listener {
         setupGUI();
 
         for (Player player : Bukkit.getOnlinePlayers()) {
+            if (player.hasPermission("votes.banvote")) continue;
             player.openInventory(gui);
         }
 
@@ -87,6 +88,7 @@ public class VotesManager implements Listener {
     public void onInventoryClose(InventoryCloseEvent event) {
         if (!event.getInventory().equals(gui)) return;
         if (!(event.getPlayer() instanceof Player player)) return;
+        if (!VoteUpdate.getInstance().getConfig().getBoolean("mandatory")) return;
 
         if (!votes.containsKey(player.getUniqueId())) {
             Bukkit.getScheduler().runTaskLater(VoteUpdate.getInstance(), () -> player.openInventory(gui), 1);

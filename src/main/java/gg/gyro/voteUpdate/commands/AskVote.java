@@ -7,10 +7,7 @@ import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
-import revxrsal.commands.annotation.AutoComplete;
-import revxrsal.commands.annotation.Command;
-import revxrsal.commands.annotation.Default;
-import revxrsal.commands.annotation.Named;
+import revxrsal.commands.annotation.*;
 import revxrsal.commands.bukkit.annotation.CommandPermission;
 
 public class AskVote {
@@ -22,6 +19,7 @@ public class AskVote {
 
     @Command("votes ask")
     @AutoComplete("@votes @votes")
+    @Description("Starts a vote between two options")
     @CommandPermission("votes.commands.ask")
     public void ask(CommandSender sender, @Named("option1") @Default("random") String vote1name, @Named("option2") @Default("random") String vote2name) {
         Vote vote1 = Votes.getVoteFromString(vote1name);

@@ -1,3 +1,15 @@
 language: "en_us"
 
-vote_delay: 300 #in seconds, 0=disabled
+# Set the delay between votes in seconds
+# 0: disabled
+# Default: 300
+vote_delay: 300
+
+# Is voting mandatory ?
+# Default: true
+mandatory: true
+
+# Disabled votes
+# Use id (id = name in lowercase, replace space with underscore)
+# Default: []
+disabled_votes: []

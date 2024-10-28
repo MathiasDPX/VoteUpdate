@@ -8,3 +8,23 @@ description: Bring 23w13a_or_b to newer version
 
 softdepend:
   - ItemsAdder
+
+permissions:
+  votes.commands:
+    default: op
+    description: Allows the player to use /votes command
+  votes.commands.list:
+    default: true
+    description: Allows the player to use see votes possibility
+  votes.commands.ask:
+    default: op
+    description: Allows the player to ask for votes
+  votes.commands.force:
+    default: op
+    description: Allows the player to force votes
+  votes.commands.undo:
+    default: op
+    description: Allows the player to undo votes
+  votes.banvote:
+    default: false
+    description: Is player banned from voting

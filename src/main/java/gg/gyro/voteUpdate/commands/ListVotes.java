@@ -5,6 +5,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import revxrsal.commands.annotation.AutoComplete;
 import revxrsal.commands.annotation.Command;
+import revxrsal.commands.annotation.Description;
 import revxrsal.commands.bukkit.annotation.CommandPermission;
 
 public class ListVotes {
@@ -16,6 +17,7 @@ public class ListVotes {
 
     @Command("votes list")
     @AutoComplete("@votes")
+    @Description("Lists all votes")
     @CommandPermission("votes.commands.list")
     public void command(CommandSender sender) {
         if (!(sender instanceof Player player)) {
