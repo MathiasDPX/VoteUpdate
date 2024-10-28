@@ -6,4 +6,4 @@ src = "src"
 title = "Vote Update's Wiki"
 
 [output.html]
-additional-css = [".\\theme\\css\\catppuccin.css"]
+additional-css = ["./theme/css/catppuccin.css"]
