@@ -6,6 +6,7 @@ import gg.gyro.voteUpdate.commands.*;
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
 import lombok.Getter;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,16 +18,21 @@ import java.util.List;
 
 public final class VoteUpdate extends JavaPlugin {
     @Getter static VoteUpdate instance;
+    @Getter static Metrics metrics;
+    @Getter Locales locales;
 
     @Override
     public void onEnable() {
         instance = this;
+
+        metrics = new Metrics(this, 23737);
+
         saveDefaultConfig();
         Locales.saveDefaultConfig(this, "en_us.yml");
         Locales.saveDefaultConfig(this, "fr_fr.yml");
 
         MenuLib.init(this);
-        new Locales(this, getConfig().getString("language"));
+        locales = new Locales(this, getConfig().getString("language"));
 
         new Votes();
 
@@ -55,7 +61,7 @@ public final class VoteUpdate extends JavaPlugin {
                 public void run() {
                     new VotesManager(Votes.getRandomVote(), Votes.getRandomVote());
                 }
-            }.runTaskTimer(this, 0, getConfig().getInt("vote_delay")*20L);
+            }.runTaskTimer(this, 600, getConfig().getInt("vote_delay")*20L);
         }
     }
 
