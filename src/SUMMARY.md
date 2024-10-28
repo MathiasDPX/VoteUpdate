@@ -2,6 +2,8 @@
 
 [Introduction](./introduction.md)
 
+# User Guide
+
 - [Commands](./commands/index.md)
   - [List](./commands/list.md)
   - [Ask](./commands/ask.md)
