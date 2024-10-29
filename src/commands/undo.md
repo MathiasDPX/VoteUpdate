@@ -1,6 +1,6 @@
 # Undo command
 
-Usage: `/votes undo <vote>`
+Usage: `/votes undo <vote>`<br>
 Permission: `votes.commands.undo`
 
 This command will undo the effect of a vote

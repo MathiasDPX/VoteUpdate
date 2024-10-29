@@ -1,6 +1,6 @@
 # Ask command
 
-Usage: `/votes ask [option1] [option2]`
+Usage: `/votes ask [option1] [option2]`<br>
 Permission: `votes.commands.ask`
 
 This command will prompt a vote to players.
