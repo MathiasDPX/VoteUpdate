@@ -25,8 +25,10 @@ public final class VoteUpdate extends JavaPlugin {
         instance = this;
 
         saveDefaultConfig();
+        Locales.saveDefaultConfig(this, "de_de.yml");
         Locales.saveDefaultConfig(this, "en_us.yml");
         Locales.saveDefaultConfig(this, "fr_fr.yml");
+        Locales.saveDefaultConfig(this, "it_it.yml");
 
         MenuLib.init(this);
         locales = new Locales(this, getConfig().getString("language"));

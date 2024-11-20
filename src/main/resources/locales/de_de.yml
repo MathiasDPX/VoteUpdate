@@ -1,0 +1,87 @@
+mirror-for:
+  - de_at
+  - de_ch
+
+commands:
+  vote_notfound: "Konnte Abstimmung mit dem Namen %s nicht finden"
+  force_voteresult: "%s wurde gezwungen auszuführen"
+  sender_not_player: "Nur Spieler können diesen Befehl verwenden"
+  undo: "Abstimmung %vote% wird rückgängig gemacht"
+
+votes:
+  already_voted: "Du hast bereits abgestimmt!"
+  success_vote: "Du hast für Option %s gestimmt"
+  result_title: "§6Abstimmungsergebnisse:"
+  result_vote: "§e%name%: §f%amount% Stimmen"
+  result_winner: "§a%s gewinnt!"
+  result_tie: "§6Es ist ein Unentschieden!"
+
+death_messages:
+  midas_touch: "%player_name% wurde zu Gold verwandelt"
+
+gui:
+  click_to_vote: "Klicken zum Abstimmen!"
+  title: "Abstimmungszeit!"
+  next_page: "Nächste Seite"
+  previous_page: "Vorherige Seite"
+  close: "Schließen"
+
+options:
+  advanced_ai:
+    name: "Fortschrittliche KI"
+    description: "Ersetze einen zufälligen Spieler durch einen fortschrittlichen KI-Bot"
+    broadcast: "%s wurde zu einem fortschrittlichen KI-Bot"
+  always_flying:
+    name: "Immer Fliegend"
+    description: "Nach allen bekannten Gesetzen der Luftfahrt sollte eine Mob nicht laufen können"
+  charged_creeper:
+    name: "Geladener Creeper"
+    description: "Jeder neue Creeper wird geladen sein"
+  default_sheep:
+    name: "Standard-Schafsfarbe"
+    description: "Neue Schafe werden immer eine zufällig vordefinierte Farbe haben"
+    broadcast: "Neue Schafe werden %color% sein"
+  bed_pvp:
+    name: "Bett-PVP"
+    description: "Alle Betten verursachen 3,5 Herzen Schaden und explodieren, wenn sie als Waffe verwendet werden."
+  binary_gamerule_flip:
+    name: "Binäre Spielregel Umkehren"
+    description: "Eine zufällige binäre Spielregel umkehren"
+    broadcast: "%gr% wurde auf %value% umgestellt"
+    true: "wahr"
+    false: "falsch"
+  egg_free:
+    name: "Eier-Frei"
+    description: "Hühner werden stattdessen ein zufälliges Gegenstand fallen lassen"
+    broadcast: "Hühner werden %material% statt Eiern legen"
+  fish_anything:
+    name: "Alles Fischen"
+    description: "Angeln wird einen zufälligen Gegenstand geben"
+  french_mode:
+    name: "Französischer Modus"
+    description: "Verwandle jeden in einen Franzosen"
+  disable_shield:
+    name: "Schild Deaktivieren"
+    description: "Schilde sind deaktiviert"
+  perma_effect:
+    name: "Permanenter Effekt"
+    description: "Wende einen zufälligen Effekt auf alle Spieler an"
+    broadcast: "Jeder hat jetzt den Effekt %effect% auf Stufe %level%"
+  pot_gems:
+    name: "Topf der Edelsteine"
+    description: "Jeder Topf wird Smaragde geben"
+  midas_touch:
+    name: "Midasberührung"
+    description: "Alles, was du berührst, wird zu Gold"
+  god_of_lightning:
+    name: "Gott des Blitzes"
+    description: "Werde fähig, Blitze zu beschwören"
+  transparent_players:
+    name: "Transparente Spieler"
+    description: "Spieler sind jetzt transparent"
+  less_gravity:
+    name: "Mondgravitation"
+    description: "Schwerkraft wird auf Mondniveau reduziert"
+  keep_friends_close:
+    name: "Halte Freunde nah"
+    description: "Entfernte Spieler werden zufällig zu dir teleportiert"

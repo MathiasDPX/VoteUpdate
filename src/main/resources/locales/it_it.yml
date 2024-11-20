@@ -1,0 +1,83 @@
+commands:
+  vote_notfound: "Impossibile trovare il voto con nome %s"
+  force_voteresult: "Forzato a eseguire %s"
+  sender_not_player: "Solo i giocatori possono usare questo comando"
+  undo: "Annullamento voto %vote%"
+
+votes:
+  already_voted: "Hai già votato!"
+  success_vote: "Hai votato per l'opzione %s"
+  result_title: "§6Risultati Votazione:"
+  result_vote: "§e%name%: §f%amount% voti"
+  result_winner: "§a%s vince!"
+  result_tie: "§6È un pareggio!"
+
+death_messages:
+  midas_touch: "%player_name% è stato trasformato in oro"
+
+gui:
+  click_to_vote: "Clicca per votare!"
+  title: "Tempo di Votare!"
+  next_page: "Pagina Successiva"
+  previous_page: "Pagina Precedente"
+  close: "Chiudi"
+
+options:
+  advanced_ai:
+    name: "IA Avanzata"
+    description: "Sostituisci un giocatore casuale con un bot IA avanzato"
+    broadcast: "%s è diventato un bot IA avanzato"
+  always_flying:
+    name: "Sempre in Volo"
+    description: "Secondo tutte le leggi note dell'aviazione, un mob non dovrebbe essere in grado di camminare"
+  charged_creeper:
+    name: "Creeper Caricato"
+    description: "Ogni nuovo Creeper sarà caricato"
+  default_sheep:
+    name: "Colore Pecora Predefinito"
+    description: "Le nuove pecore avranno sempre un colore predefinito casuale"
+    broadcast: "Le nuove pecore saranno %color%"
+  bed_pvp:
+    name: "Letto PVP"
+    description: "Tutti i letti infliggono 3,5 cuori di danno ed esplodono quando usati come arma."
+  binary_gamerule_flip:
+    name: "Inversione Regola Binaria"
+    description: "Capovolgi una regola di gioco binaria casuale"
+    broadcast: "%gr% è stato impostato su %value%"
+    true: "vero"
+    false: "falso"
+  egg_free:
+    name: "Senza Uova"
+    description: "I polli lasceranno cadere un oggetto casuale invece di uova"
+    broadcast: "I polli lasceranno %material% invece di uova"
+  fish_anything:
+    name: "Pesca Qualsiasi Cosa"
+    description: "La pesca darà un oggetto casuale"
+  french_mode:
+    name: "Modalità Francese"
+    description: "Trasforma tutti in francesi"
+  disable_shield:
+    name: "Disabilita Scudo"
+    description: "Gli scudi sono disabilitati"
+  perma_effect:
+    name: "Effetto Permanente"
+    description: "Applica un effetto casuale a tutti i giocatori"
+    broadcast: "Tutti ora hanno l'effetto %effect% al livello %level%"
+  pot_gems:
+    name: "Pentola di Gemme"
+    description: "Ogni pentola darà smeraldi"
+  midas_touch:
+    name: "Tocco di Mida"
+    description: "Tutto ciò che tocchi diventa oro"
+  god_of_lightning:
+    name: "Dio dei Fulmini"
+    description: "Diventa in grado di evocare fulmini"
+  transparent_players:
+    name: "Giocatori Trasparenti"
+    description: "I giocatori sono ora trasparenti"
+  less_gravity:
+    name: "Gravità Lunare"
+    description: "La gravità è ridotta ai livelli lunari"
+  keep_friends_close:
+    name: "Tieni gli Amici Vicini"
+    description: "I giocatori lontani vengono teletrasportati casualmente da te"

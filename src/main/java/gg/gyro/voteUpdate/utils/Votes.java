@@ -52,7 +52,6 @@ public class Votes {
     }
 
     public static Vote getRandomVote() {
-        FileConfiguration conf = VoteUpdate.getInstance().getConfig();
         Random random = new Random();
         return votes.get(random.nextInt(votes.size()));
     }

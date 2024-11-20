@@ -1,3 +1,7 @@
+mirror-for:
+  - fr_ca
+  - fr_fr
+
 commands:
   vote_notfound: "Impossible de trouver le vote nommé %s"
   force_voteresult: "Force l'éxécution de %s"
