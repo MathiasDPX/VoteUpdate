@@ -78,3 +78,6 @@ options:
   less_gravity:
     name: "Moon Gravity"
     description: "Gravity is reduced to moon levels"
+  keep_friends_close:
+    name: "Keep Friends Close"
+    description: "Far players get randomly teleported to you"

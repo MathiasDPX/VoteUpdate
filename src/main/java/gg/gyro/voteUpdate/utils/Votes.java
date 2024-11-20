@@ -31,7 +31,8 @@ public class Votes {
                 new MidasTouch(),
                 new GodOfLightning(),
                 new TransparentPlayers(),
-                new LessGravity()
+                new LessGravity(),
+                new KeepFriendsClose()
         );
     }
 
@@ -53,10 +54,6 @@ public class Votes {
     public static Vote getRandomVote() {
         FileConfiguration conf = VoteUpdate.getInstance().getConfig();
         Random random = new Random();
-        Vote vote = votes.get(random.nextInt(votes.size()));
-        if (!conf.getStringList("disabled_votes").contains(vote.getId())) {
-            return getRandomVote();
-        }
-        return vote;
+        return votes.get(random.nextInt(votes.size()));
     }
 }

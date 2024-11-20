@@ -78,3 +78,6 @@ options:
   less_gravity:
     name: "Gravité lunaire"
     description: "La gravité est équivalente à celle de la lune"
+  keep_friends_close:
+    name: "Garder vos amis proches"
+    description: "Les joueurs loins de vous sont aléatoirement téléportés à vous"
