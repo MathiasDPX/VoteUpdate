@@ -40,3 +40,9 @@ jobs:
           echo "git_hash=$git_hash" >> $GITHUB_ENV
           echo "snapshotVersion=5.5-SNAPSHOT" >> $GITHUB_ENV
           echo "artifactPath=$(pwd)/builds" >> $GITHUB_ENV
+      - name: Upload artifacts
+        continue-on-error: true
+        uses: actions/upload-artifact@v3
+        with:
+          name: Votes-${{ env.git_hash }}.jar
+          path: ${{ env.artifactPath }}/Votes.jar

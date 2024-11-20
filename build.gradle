@@ -60,6 +60,15 @@ tasks.withType(JavaCompile).configureEach {
     }
 }
 
+shadowJar {
+    destinationDirectory.set(file("./builds/"))
+    archiveFileName = "Votes.jar"
+}
+
+clean {
+    delete "builds"
+}
+
 processResources {
     def props = [version: version]
     inputs.properties props
