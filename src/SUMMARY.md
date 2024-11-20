@@ -9,6 +9,7 @@
   - [Ask](./commands/ask.md)
   - [Force](./commands/force.md)
   - [Undo](./commands/undo.md)
+  - [On/Off](./commands/on_off.md)
 
 - [Votes]()
   - [Advanced AI]()
@@ -27,3 +28,4 @@
   - [Perma Effect]()
   - [Pot of Gems]()
   - [Transparent Players]()
+  - [Keep Friends Close]()
