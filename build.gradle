@@ -22,7 +22,7 @@ repositories {
     }
     maven {
         name = "mathias-maven"
-        url = uri("https://mvn.coolcraft.ovh/releases")
+        url = uri("https://mvn.mathiasd.fr/releases")
     }
 }
 
