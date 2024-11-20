@@ -8,6 +8,12 @@ commands:
   sender_not_player: "Nur Spieler können diesen Befehl verwenden"
   undo: "Abstimmung %vote% wird rückgängig gemacht"
 
+  onoff:
+    already_on: "Abstimmungen sind bereits aktiviert"
+    already_off: "Abstimmungen sind bereits deaktiviert"
+    now_on: "Abstimmungen sind jetzt aktiviert"
+    now_off: "Abstimmungen sind jetzt deaktiviert"
+
 votes:
   already_voted: "Du hast bereits abgestimmt!"
   success_vote: "Du hast für Option %s gestimmt"

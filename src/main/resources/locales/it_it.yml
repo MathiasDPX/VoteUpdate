@@ -4,6 +4,12 @@ commands:
   sender_not_player: "Solo i giocatori possono usare questo comando"
   undo: "Annullamento voto %vote%"
 
+  onoff:
+    already_on: "I voti sono già abilitati"
+    already_off: "I voti sono già disabilitati"
+    now_on: "I voti sono ora abilitati"
+    now_off: "I voti sono ora disabilitati"
+
 votes:
   already_voted: "Hai già votato!"
   success_vote: "Hai votato per l'opzione %s"

@@ -48,7 +48,8 @@ public final class VoteUpdate extends JavaPlugin {
                 new AskVote(),
                 new ForceVote(),
                 new ListVotes(),
-                new UndoCommand()
+                new UndoCommand(),
+                new TurnONOFF()
         );
 
         if (getConfig().getInt("vote_delay") == 0) {
@@ -58,6 +59,7 @@ public final class VoteUpdate extends JavaPlugin {
             new BukkitRunnable() {
                 @Override
                 public void run() {
+                    if (!TurnONOFF.isVoteOn) { return; }
                     new VotesManager(Votes.getRandomVote(), Votes.getRandomVote());
                 }
             }.runTaskTimer(this, 600, getConfig().getInt("vote_delay")*20L);
