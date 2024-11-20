@@ -6,7 +6,6 @@ import gg.gyro.voteUpdate.commands.*;
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
 import lombok.Getter;
-import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -18,14 +17,12 @@ import java.util.List;
 
 public final class VoteUpdate extends JavaPlugin {
     @Getter static VoteUpdate instance;
-    @Getter static Metrics metrics;
+
     @Getter Locales locales;
 
     @Override
     public void onEnable() {
         instance = this;
-
-        metrics = new Metrics(this, 23737);
 
         saveDefaultConfig();
         Locales.saveDefaultConfig(this, "en_us.yml");
