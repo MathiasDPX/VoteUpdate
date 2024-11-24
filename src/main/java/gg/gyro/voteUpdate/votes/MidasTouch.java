@@ -9,7 +9,7 @@ import org.bukkit.inventory.ItemStack;
 public class MidasTouch extends Vote {
     @Override
     public ItemStack getIcon() {
-        return new ItemStack(Material.PHANTOM_MEMBRANE);
+        return new ItemStack(Material.GOLD_INGOT);
     }
 
     @Override
