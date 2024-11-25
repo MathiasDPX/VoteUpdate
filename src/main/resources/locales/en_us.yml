@@ -96,3 +96,9 @@ options:
   keep_friends_close:
     name: "Keep Friends Close"
     description: "Far players get randomly teleported to you"
+  remove_phantoms:
+    name: "Remove Phantoms"
+    description: "Phantoms are removed from the game"
+  tntennis:
+    name: "TNTennis"
+    description: "When hitting a primed tnt, they will be launched in the direction of the hit"

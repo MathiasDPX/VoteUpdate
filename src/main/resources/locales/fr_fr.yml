@@ -91,3 +91,9 @@ options:
   keep_friends_close:
     name: "Garder vos amis proches"
     description: "Les joueurs loins de vous sont aléatoirement téléportés à vous"
+  remove_phantoms:
+    name: "Plus de phantoms"
+    description: "Les phantoms ne peuvent plus apparaitre"
+  tntennis:
+    name: "TNTennis"
+    description: "En tappeant une tnt, elle sera lancée dans la direction du coup"

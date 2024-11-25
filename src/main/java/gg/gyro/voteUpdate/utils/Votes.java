@@ -32,7 +32,9 @@ public class Votes {
                 new GodOfLightning(),
                 new TransparentPlayers(),
                 new LessGravity(),
-                new KeepFriendsClose()
+                new KeepFriendsClose(),
+                new RemovePhantoms(),
+                new TNTennis()
         );
     }
 
