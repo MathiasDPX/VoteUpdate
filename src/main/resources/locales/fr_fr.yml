@@ -97,3 +97,6 @@ options:
   tntennis:
     name: "TNTennis"
     description: "En tappeant une tnt, elle sera lancée dans la direction du coup"
+  unstable_tnt:
+    name: "TNT instable"
+    description: "Les tnt seront instables"

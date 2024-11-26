@@ -102,3 +102,6 @@ options:
   tntennis:
     name: "TNTennis"
     description: "When hitting a primed tnt, they will be launched in the direction of the hit"
+  unstable_tnt:
+    name: "Unstable TNT"
+    description: "TNT will be unstable"

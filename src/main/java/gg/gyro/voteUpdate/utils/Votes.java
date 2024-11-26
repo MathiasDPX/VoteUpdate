@@ -34,7 +34,8 @@ public class Votes {
                 new LessGravity(),
                 new KeepFriendsClose(),
                 new RemovePhantoms(),
-                new TNTennis()
+                new TNTennis(),
+                new UnstableTNT()
         );
     }
 
