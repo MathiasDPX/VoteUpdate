@@ -6,24 +6,24 @@ import gg.gyro.voteUpdate.utils.Vote;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-public class UnstableTNT extends Vote {
+public class VotingFireworks extends Vote {
     @Override
     public ItemStack getIcon() {
-        return new ItemStack(Material.TNT);
+        return new ItemStack(Material.FIREWORK_ROCKET);
     }
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.unstable_tnt.name");
+        return Locales.getInstance().get("options.voting_fireworks.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.unstable_tnt.description");
+        return Locales.getInstance().get("options.voting_fireworks.description");
     }
 
     @Override
     public void apply() {
-        VoteUpdate.registerEvents(new gg.gyro.voteUpdate.listeners.UnstableTNT());
+        VoteUpdate.registerEvents(new gg.gyro.voteUpdate.listeners.VotingFireworks());
     }
 }

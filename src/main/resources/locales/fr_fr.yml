@@ -100,3 +100,6 @@ options:
   unstable_tnt:
     name: "TNT instable"
     description: "Les tnt seront instables"
+  voting_fireworks:
+    name: "Feux d'artifice de vote"
+    description: "Des feux d'artifice apparaitront lors de l'annonce des votes"

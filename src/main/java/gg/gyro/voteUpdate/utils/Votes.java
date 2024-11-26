@@ -35,7 +35,8 @@ public class Votes {
                 new KeepFriendsClose(),
                 new RemovePhantoms(),
                 new TNTennis(),
-                new UnstableTNT()
+                new UnstableTNT(),
+                new VotingFireworks()
         );
     }
 

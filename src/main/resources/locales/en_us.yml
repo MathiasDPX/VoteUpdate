@@ -105,3 +105,6 @@ options:
   unstable_tnt:
     name: "Unstable TNT"
     description: "TNT will be unstable"
+  voting_fireworks:
+    name: "Voting fireworks"
+    description: "Fireworks will be launched when a vote ends"
