@@ -1,4 +1,4 @@
 # Disable Shields
-![icon](/assets/icons/disable_shields.png)
+![icon](../assets/icons/disable_shields.png)
 
 **Description:** Shields are disabled
