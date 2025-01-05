@@ -1,0 +1,12 @@
+[book]
+authors = ["MathiasDPX"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Vote Update's Wiki"
+
+[output.html]
+additional-css = ["./theme/css/catppuccin.css"]
+git-repository-url = "https://github.com/MathiasDPX/VoteUpdate"
+edit-url-template = "https://github.com/MathiasDPX/VoteUpdate/tree/wiki/{path}"
+site-url = "/VoteUpdate/"
