@@ -1,0 +1,66 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths: ["build.gradle"]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      - name: Check version change
+        run: |
+          git diff HEAD^ HEAD > changes.diff
+          
+          VERSION=$(grep -P "^.*version = '\d+\.\d+\.\d+'" build.gradle | grep -oP "\d+\.\d+\.\d+")
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          
+          if grep -P "^[\+\-].*version = '\d+\.\d+\.\d+'" changes.diff; then
+            echo "VERSION_CHANGED=true" >> $GITHUB_ENV
+          else
+            echo "VERSION_CHANGED=false" >> $GITHUB_ENV
+          fi
+      
+      - name: Build with Gradle
+        if: env.VERSION_CHANGED == 'true'
+        run: |
+          chmod 777 gradlew
+          ./gradlew shadowJar
+
+      - name: Generate Release Notes
+        if: env.VERSION_CHANGED == 'true'
+        run: |
+          pip install requests
+          python3 release_body.py
+      
+      - name: Create Release
+        if: env.VERSION_CHANGED == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ env.VERSION }}
+          name: Release v${{ env.VERSION }}
+          body_path: body.md
+          files: builds/Votes.jar
+          draft: false
+          prerelease: false
