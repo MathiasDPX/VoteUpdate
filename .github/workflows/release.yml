@@ -43,13 +43,13 @@ jobs:
           fi
       
       - name: Build with Gradle
-        if: env.VERSION_CHANGED == 'true'
+        if: ${{ github.event_name == 'workflow_dispatch' || env.VERSION_CHANGED == 'true' }}
         run: |
           chmod 777 gradlew
           ./gradlew shadowJar
 
       - name: Generate Release Notes
-        if: env.VERSION_CHANGED == 'true'
+        if: ${{ github.event_name == 'workflow_dispatch' || env.VERSION_CHANGED == 'true' }}
         run: |
           pip install requests
           python3 release_body.py
@@ -60,7 +60,7 @@ jobs:
           mv votes.zip pack.zip
       
       - name: Create Release
-        if: env.VERSION_CHANGED == 'true'
+        if: ${{ github.event_name == 'workflow_dispatch' || env.VERSION_CHANGED == 'true' }}
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ env.VERSION }}
