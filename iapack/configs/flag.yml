@@ -1,0 +1,12 @@
+info:
+    namespace: votes
+items:
+    le_tricolore:
+        display_name: Tricolore
+        permission: votes.ia.tricolore
+        resource:
+            material: PAPER
+            generate: true
+            textures:
+                - items/tricolore.png
+            model_id: 22002

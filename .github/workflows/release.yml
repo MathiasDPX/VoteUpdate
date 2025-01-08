@@ -53,6 +53,11 @@ jobs:
         run: |
           pip install requests
           python3 release_body.py
+
+          mkdir votes
+          mv iapack/* votes/
+          zip -r votes.zip votes/
+          mv votes.zip pack.zip
       
       - name: Create Release
         if: env.VERSION_CHANGED == 'true'
@@ -61,6 +66,8 @@ jobs:
           tag_name: v${{ env.VERSION }}
           name: Release v${{ env.VERSION }}
           body_path: body.md
-          files: builds/Votes.jar
+          files: |
+            builds/Votes.jar
+            pack.zip
           draft: false
           prerelease: false

@@ -1,0 +1,18 @@
+info:
+    namespace: votes
+items:
+    la_baguette:
+        display_name: La Baguette
+        permission: votes.ia.baguette
+        durability: 
+            max_custom_durability: 59
+        attribute_modifiers:
+            mainhand:
+                attackDamage: 4
+                attackSpeed: 1.6
+        resource:
+            material: WOODEN_SWORD
+            generate: true
+            textures:
+                - items/baguette.png
+            model_id: 22001
