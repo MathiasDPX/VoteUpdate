@@ -24,13 +24,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v4
       - name: Setup JDK
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v4
         with:
-          distribution: 'adopt'
+          distribution: 'jetbrains'
           java-version: '21'
       - name: Build with Gradle
         run: |
@@ -42,7 +40,8 @@ jobs:
           echo "artifactPath=$(pwd)/builds" >> $GITHUB_ENV
       - name: Upload artifacts
         continue-on-error: true
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Votes-${{ env.git_hash }}.jar
           path: ${{ env.artifactPath }}/Votes.jar
+          if-no-files-found: 'error'
