@@ -4,7 +4,7 @@
 
 # User Guide
 
-- [Commands](commands/index.md)
+- [Commands](./commands/index.md)
   - [List](commands/list.md)
   - [Ask](commands/ask.md)
   - [Force](commands/force.md)
