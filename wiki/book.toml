@@ -8,5 +8,5 @@ title = "Vote Update's Wiki"
 [output.html]
 additional-css = ["./theme/css/catppuccin.css"]
 git-repository-url = "https://github.com/MathiasDPX/VoteUpdate"
-edit-url-template = "https://github.com/MathiasDPX/VoteUpdate/tree/wiki/{path}"
+edit-url-template = "https://github.com/MathiasDPX/VoteUpdate/tree/master/wiki/{path}"
 site-url = "/VoteUpdate/"
