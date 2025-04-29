@@ -1,43 +1,23 @@
 package gg.gyro.voteUpdate.utils;
 
-import gg.gyro.voteUpdate.VoteUpdate;
-import gg.gyro.voteUpdate.votes.*;
 import lombok.Getter;
-import org.bukkit.configuration.file.FileConfiguration;
+import org.reflections.Reflections;
 
 import java.util.*;
 
 public class Votes {
     @Getter static List<Vote> votes = new ArrayList<>();
 
-    private void registerAll(Vote... v) {
-        votes.addAll(Arrays.asList(v));
-    }
-
     public Votes() {
-        registerAll(
-                new AlwaysFlying(),
-                new ChargedCreeper(),
-                new AdvancedAI(),
-                new DefaultSheep(),
-                new BedPVP(),
-                new BinaryGameruleFlip(),
-                new EggFree(),
-                new FishAnything(),
-                new FrenchMode(),
-                new DisableShield(),
-                new PermaEffect(),
-                new PotGems(),
-                new MidasTouch(),
-                new GodOfLightning(),
-                new TransparentPlayers(),
-                new LessGravity(),
-                new KeepFriendsClose(),
-                new RemovePhantoms(),
-                new TNTennis(),
-                new UnstableTNT(),
-                new VotingFireworks()
-        );
+        Reflections reflections = new Reflections("gg.gyro.voteUpdate.votes");
+        Set<Class<? extends Vote>> votes_classz = reflections.getSubTypesOf(Vote.class);
+        for (Class<? extends Vote> voteClass : votes_classz) {
+            try {
+                votes.add(voteClass.getDeclaredConstructor().newInstance());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public static Vote getById(String id) {
