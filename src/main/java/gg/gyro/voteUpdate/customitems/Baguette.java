@@ -15,10 +15,10 @@ public class Baguette extends CustomItem {
         ItemStack baguette = new ItemStack(Material.BREAD);
         ItemMeta meta = baguette.getItemMeta();
 
-        AttributeModifier attackDmg = new AttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE.getKey(), 4, AttributeModifier.Operation.ADD_NUMBER);
-        AttributeModifier attackSpd = new AttributeModifier(Attribute.GENERIC_ATTACK_SPEED.getKey(), 1.6, AttributeModifier.Operation.ADD_NUMBER);
-        meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, attackDmg);
-        meta.addAttributeModifier(Attribute.GENERIC_ATTACK_SPEED, attackSpd);
+        AttributeModifier attackDmg = new AttributeModifier(Attribute.ATTACK_DAMAGE.getKey(), 4, AttributeModifier.Operation.ADD_NUMBER);
+        AttributeModifier attackSpd = new AttributeModifier(Attribute.ATTACK_SPEED.getKey(), 1.6, AttributeModifier.Operation.ADD_NUMBER);
+        meta.addAttributeModifier(Attribute.ATTACK_DAMAGE, attackDmg);
+        meta.addAttributeModifier(Attribute.ATTACK_SPEED, attackSpd);
 
         meta.displayName(Component.text("La Baguette").decoration(TextDecoration.ITALIC, false));
 
