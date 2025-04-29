@@ -6,6 +6,8 @@ import gg.gyro.voteUpdate.events.PlayerVoteEvent;
 import gg.gyro.voteUpdate.events.VoteEndEvent;
 import gg.gyro.voteUpdate.utils.TextReducer;
 import gg.gyro.voteUpdate.utils.Vote;
+import lombok.Getter;
+import lombok.Setter;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;
@@ -31,6 +33,9 @@ public class VotesManager implements Listener {
     private final Map<UUID, Integer> votes;
     private final Inventory gui;
     private static Locales locales;
+
+    @Getter @Setter
+    private static UUID president = null;
 
     public VotesManager(Vote option1, Vote option2) {
         this.plugin = VoteUpdate.getInstance();
@@ -133,6 +138,12 @@ public class VotesManager implements Listener {
     private void showResults() {
         int votesOption1 = (int) votes.values().stream().filter(v -> v == 1).count();
         int votesOption2 = (int) votes.values().stream().filter(v -> v == 2).count();
+
+        if (votes.getOrDefault(president, 0) == 1) {
+            votesOption1++;
+        } else if (votes.getOrDefault(president, 0) == 2) {
+            votesOption2++;
+        }
 
         String resultMessage = locales.get("votes.result_title")+"\n" +
                 locales.get("votes.result_vote").replace("%name%", option1.getName()).replace("%amount%", String.valueOf(votesOption1))+"\n" +
