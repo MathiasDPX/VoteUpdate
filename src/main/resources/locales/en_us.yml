@@ -108,3 +108,6 @@ options:
   voting_fireworks:
     name: "Voting fireworks"
     description: "Fireworks will be launched when a vote ends"
+  hotpotatoes:
+    name: "Hot Potatoes"
+    description: "Deal 1 heart per second to players holding a baked potato"
