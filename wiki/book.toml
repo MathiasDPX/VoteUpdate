@@ -6,6 +6,6 @@ src = "src"
 title = "Vote Update's Wiki"
 
 [output.html]
-git-repository-url = "https://github.com/MathiasDPX/VoteUpdate"
+git-repository-url = "https://github.com/MathiasDPX/VoteUpdate/wiki"
 edit-url-template = "https://github.com/MathiasDPX/VoteUpdate/tree/master/wiki/{path}"
 site-url = "/VoteUpdate/"
