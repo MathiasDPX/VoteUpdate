@@ -103,3 +103,7 @@ options:
   voting_fireworks:
     name: "Feux d'artifice de vote"
     description: "Des feux d'artifice apparaitront lors de l'annonce des votes"
+  stone_age:
+    name: "L'âge de pierre"
+    description: "Renomme tout les joueurs en '%playername%'"
+    playername: "Pierre"

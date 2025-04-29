@@ -115,3 +115,7 @@ options:
     name: "President"
     description: "A random player will be elected as president, his votes will count as 2"
     message: "%president% is your new President!"
+  stone_age:
+    name: "Stone Age"
+    description: "Rename all players to '%playername%'"
+    playername: "Stone"
