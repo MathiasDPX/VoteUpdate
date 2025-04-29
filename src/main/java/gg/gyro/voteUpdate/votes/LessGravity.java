@@ -27,7 +27,7 @@ public class LessGravity extends Vote {
     @Override
     public void apply() {
         for (Player player: Bukkit.getOnlinePlayers()) {
-            player.getAttribute(Attribute.GENERIC_GRAVITY).setBaseValue(0.005);
+            player.getAttribute(Attribute.GRAVITY).setBaseValue(0.005);
         }
     }
 }

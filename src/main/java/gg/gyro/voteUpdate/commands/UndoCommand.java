@@ -31,7 +31,7 @@ public class UndoCommand {
     @Description("Resets gravity to normal")
     public void moon(CommandSender sender) {
         for (Player player: Bukkit.getOnlinePlayers()) {
-            player.getAttribute(Attribute.GENERIC_GRAVITY).setBaseValue(0.08);
+            player.getAttribute(Attribute.GRAVITY).setBaseValue(0.08);
         }
     }
 }
