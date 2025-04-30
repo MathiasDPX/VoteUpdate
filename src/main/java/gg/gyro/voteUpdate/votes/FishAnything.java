@@ -14,12 +14,12 @@ public class FishAnything extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.fish_anything.name");
+        return Locales.get("options.fish_anything.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.fish_anything.description");
+        return Locales.get("options.fish_anything.description");
     }
 
     @Override

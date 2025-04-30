@@ -17,12 +17,12 @@ public class RemovePhantoms extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.remove_phantoms.name");
+        return Locales.get("options.remove_phantoms.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.remove_phantoms.description");
+        return Locales.get("options.remove_phantoms.description");
     }
 
     @Override

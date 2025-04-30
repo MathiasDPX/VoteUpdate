@@ -17,17 +17,17 @@ public class FrenchMode extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.french_mode.name");
+        return Locales.get("options.french_mode.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.french_mode.description");
+        return Locales.get("options.french_mode.description");
     }
 
     @Override
     public void apply() {
-        new Locales(VoteUpdate.getInstance(), "fr_fr");
+        Locales.initialize(VoteUpdate.getInstance(), "fr_fr");
         ItemStack baguette = new Baguette().getBest();
         ItemStack tricolore = new Tricolore().getBest();
 

@@ -39,11 +39,10 @@ public class VotesManager implements Listener {
 
     public VotesManager(Vote option1, Vote option2) {
         this.plugin = VoteUpdate.getInstance();
-        locales = Locales.getInstance();
         this.option1 = option1;
         this.option2 = option2;
         this.votes = new HashMap<>();
-        this.gui = Bukkit.createInventory(null, 9, Component.text(locales.get("gui.title")));
+        this.gui = Bukkit.createInventory(null, 9, Component.text(Locales.get("gui.title")));
 
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
         plugin.getLogger().info("Starting new votes ("+option1.getId()+" or "+option2.getId()+")");
@@ -81,7 +80,7 @@ public class VotesManager implements Listener {
         meta.displayName(Component.text(vote.getName()).color(NamedTextColor.GOLD).decoration(TextDecoration.ITALIC, false).decoration(TextDecoration.BOLD, true));
         List<Component> lore = new ArrayList<>(TextReducer.reduceText(vote.getDescription(), 25));
         lore.add(Component.empty());
-        lore.add(Component.text(locales.get("gui.click_to_vote")).color(NamedTextColor.YELLOW).decoration(TextDecoration.ITALIC, false));
+        lore.add(Component.text(Locales.get("gui.click_to_vote")).color(NamedTextColor.YELLOW).decoration(TextDecoration.ITALIC, false));
 
         meta.lore(lore);
 
@@ -123,7 +122,7 @@ public class VotesManager implements Listener {
         if (!votes.containsKey(voter.getUniqueId())) {
             votes.put(voter.getUniqueId(), option);
             voter.playSound(voter.getEyeLocation(), Sound.BLOCK_NOTE_BLOCK_BIT, 1, 1);
-            voter.sendMessage(locales.get("votes.success_vote").replace("%s", String.valueOf(option)));
+            voter.sendMessage(Locales.get("votes.success_vote").replace("%s", String.valueOf(option)));
 
             if (option == 1) {
                 Bukkit.getPluginManager().callEvent(new PlayerVoteEvent(option1, voter));
@@ -131,7 +130,7 @@ public class VotesManager implements Listener {
                 Bukkit.getPluginManager().callEvent(new PlayerVoteEvent(option2, voter));
             }
         } else {
-            voter.sendMessage(locales.get("votes.already_voted"));
+            voter.sendMessage(Locales.get("votes.already_voted"));
         }
     }
 
@@ -145,27 +144,27 @@ public class VotesManager implements Listener {
             votesOption2++;
         }
 
-        String resultMessage = locales.get("votes.result_title")+"\n" +
-                locales.get("votes.result_vote").replace("%name%", option1.getName()).replace("%amount%", String.valueOf(votesOption1))+"\n" +
-                locales.get("votes.result_vote").replace("%name%", option2.getName()).replace("%amount%", String.valueOf(votesOption2))+"\n";
+        String resultMessage = Locales.get("votes.result_title")+"\n" +
+                Locales.get("votes.result_vote").replace("%name%", option1.getName()).replace("%amount%", String.valueOf(votesOption1))+"\n" +
+                Locales.get("votes.result_vote").replace("%name%", option2.getName()).replace("%amount%", String.valueOf(votesOption2))+"\n";
 
         if (votesOption1 > votesOption2) {
             triggerEvents(option1, option2);
 
-            resultMessage += locales.get("votes.result_winner").replace("%s", option1.getName());
+            resultMessage += Locales.get("votes.result_winner").replace("%s", option1.getName());
             VoteUpdate.getInstance().getLogger().info("Applying "+option1.getId()+" vote");
 
             option1.apply();
         } else if (votesOption2 > votesOption1) {
             triggerEvents(option2, option1);
 
-            resultMessage += locales.get("votes.result_winner").replace("%s", option2.getName());
+            resultMessage += Locales.get("votes.result_winner").replace("%s", option2.getName());
             VoteUpdate.getInstance().getLogger().info("Applying "+option2.getId()+" vote");
 
             option2.apply();
         } else {
             Bukkit.getPluginManager().callEvent(new VoteEndEvent(option1, option2, votes.keySet(), true));
-            resultMessage += locales.get("votes.result_tie");
+            resultMessage += Locales.get("votes.result_tie");
         }
 
         for (Player player : Bukkit.getOnlinePlayers()) {

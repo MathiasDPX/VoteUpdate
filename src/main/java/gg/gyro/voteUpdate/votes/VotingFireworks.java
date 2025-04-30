@@ -14,12 +14,12 @@ public class VotingFireworks extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.voting_fireworks.name");
+        return Locales.get("options.voting_fireworks.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.voting_fireworks.description");
+        return Locales.get("options.voting_fireworks.description");
     }
 
     @Override

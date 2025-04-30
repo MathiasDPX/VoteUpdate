@@ -31,12 +31,12 @@ public class BinaryGameruleFlip extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.binary_gamerule_flip.name");
+        return Locales.get("options.binary_gamerule_flip.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.binary_gamerule_flip.description");
+        return Locales.get("options.binary_gamerule_flip.description");
     }
 
     @Override
@@ -48,13 +48,13 @@ public class BinaryGameruleFlip extends Vote {
         Boolean def = (Boolean) ow.getGameRuleValue(choosed);
         ow.setGameRule(choosed, !def);
 
-        String msg = Locales.getInstance().get("options.binary_gamerule_flip.broadcast")
+        String msg = Locales.get("options.binary_gamerule_flip.broadcast")
                         .replace("%gr%", choosed.getName());
 
         if (!def) {
-            msg = msg.replace("%value%", Locales.getInstance().get("options.binary_gamerule_flip.true"));
+            msg = msg.replace("%value%", Locales.get("options.binary_gamerule_flip.true"));
         } else {
-            msg = msg.replace("%value%", Locales.getInstance().get("options.binary_gamerule_flip.false"));
+            msg = msg.replace("%value%", Locales.get("options.binary_gamerule_flip.false"));
         }
 
         Bukkit.getServer().broadcast(Component.text(msg));

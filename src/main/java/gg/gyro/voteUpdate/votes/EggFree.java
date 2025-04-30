@@ -16,12 +16,12 @@ public class EggFree extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.egg_free.name");
+        return Locales.get("options.egg_free.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.egg_free.description");
+        return Locales.get("options.egg_free.description");
     }
 
     @Override

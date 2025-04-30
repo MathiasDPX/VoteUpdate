@@ -31,9 +31,9 @@ public class MilkEverything implements Listener {
             ItemMeta meta = bucket.getItemMeta();
             String bucketname = null;
             if (entity instanceof Player player) {
-                bucketname = Locales.getInstance().get("options.milkeverything.playermilk").replace("%player%", player.getName());
+                bucketname = Locales.get("options.milkeverything.playermilk").replace("%player%", player.getName());
             } else {
-                bucketname = Locales.getInstance().get("options.milkeverything.mobmilk").replace("%mob%", entity.getName());
+                bucketname = Locales.get("options.milkeverything.mobmilk").replace("%mob%", entity.getName());
             }
 
             meta.displayName(Component.text(bucketname).decoration(TextDecoration.ITALIC, false));

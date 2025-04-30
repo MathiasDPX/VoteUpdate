@@ -14,12 +14,12 @@ public class BedPVP extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.bed_pvp.name");
+        return Locales.get("options.bed_pvp.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.bed_pvp.description");
+        return Locales.get("options.bed_pvp.description");
     }
 
     @Override

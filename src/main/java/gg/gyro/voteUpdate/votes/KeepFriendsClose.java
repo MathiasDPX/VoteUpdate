@@ -23,12 +23,12 @@ public class KeepFriendsClose extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.keep_friends_close.name");
+        return Locales.get("options.keep_friends_close.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.keep_friends_close.description");
+        return Locales.get("options.keep_friends_close.description");
     }
 
     @Override

@@ -16,14 +16,14 @@ public class TurnONOFF {
     @Description("Enable votes")
     @CommandPermission("votes.commands.onoff")
     void turn_on(CommandSender sender) {
-        String lang = Locales.getInstance().getDefaultLocale();
+        String lang = Locales.getDefaultLocale();
         if (sender instanceof Player player) lang = player.getLocale();
 
         if (isVoteOn) {
-            sender.sendMessage(Locales.getInstance().get(lang, "commands.onoff.already_on"));
+            sender.sendMessage(Locales.get(lang, "commands.onoff.already_on"));
         } else {
             isVoteOn = true;
-            sender.sendMessage(Locales.getInstance().get(lang, "commands.onoff.now_on"));
+            sender.sendMessage(Locales.get(lang, "commands.onoff.now_on"));
         }
     }
 
@@ -32,14 +32,14 @@ public class TurnONOFF {
     @Description("Disable votes")
     @CommandPermission("votes.commands.onoff")
     void turn_off(CommandSender sender) {
-        String lang = Locales.getInstance().getDefaultLocale();
+        String lang = Locales.getDefaultLocale();
         if (sender instanceof Player player) lang = player.getLocale();
 
         if (!isVoteOn) {
-            sender.sendMessage(Locales.getInstance().get(lang, "commands.onoff.already_off"));
+            sender.sendMessage(Locales.get(lang, "commands.onoff.already_off"));
         } else {
             isVoteOn = false;
-            sender.sendMessage(Locales.getInstance().get(lang, "commands.onoff.now_off"));
+            sender.sendMessage(Locales.get(lang, "commands.onoff.now_off"));
         }
     }
 }

@@ -18,8 +18,6 @@ import java.util.List;
 public final class VoteUpdate extends JavaPlugin {
     @Getter static VoteUpdate instance;
 
-    @Getter Locales locales;
-
     @Override
     public void onEnable() {
         instance = this;
@@ -31,7 +29,7 @@ public final class VoteUpdate extends JavaPlugin {
         Locales.saveDefaultConfig(this, "it_it.yml");
 
         MenuLib.init(this);
-        locales = new Locales(this, getConfig().getString("language"));
+        Locales.initialize(this, getConfig().getString("language"));
         Votes.initialize();
 
         BukkitCommandHandler handler = BukkitCommandHandler.create(this);

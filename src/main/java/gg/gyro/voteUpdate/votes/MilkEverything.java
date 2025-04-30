@@ -14,12 +14,12 @@ public class MilkEverything extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.milkeverything.name");
+        return Locales.get("options.milkeverything.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.milkeverything.description");
+        return Locales.get("options.milkeverything.description");
     }
 
     @Override

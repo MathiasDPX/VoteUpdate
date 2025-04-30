@@ -14,12 +14,12 @@ public class FixPiston extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.fixpiston.name");
+        return Locales.get("options.fixpiston.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.fixpiston.description");
+        return Locales.get("options.fixpiston.description");
     }
 
     @Override

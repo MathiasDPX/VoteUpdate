@@ -10,17 +10,11 @@ import revxrsal.commands.annotation.Description;
 import revxrsal.commands.bukkit.annotation.CommandPermission;
 
 public class UndoCommand {
-    Locales locales;
-
-    public UndoCommand() {
-        locales = Locales.getInstance();
-    }
-
     @Command("votes undo invisible")
     @CommandPermission("votes.commands.undo.invisible")
     @Description("Makes all players visible")
     public void invisible(CommandSender sender) {
-        sender.sendMessage(locales.get("commands.undo").replace("%vote%", locales.get("options.transparent_players.name")));
+        sender.sendMessage(Locales.get("commands.undo").replace("%vote%", Locales.get("options.transparent_players.name")));
         for (Player player: Bukkit.getOnlinePlayers()) {
             player.setInvisible(false);
         }

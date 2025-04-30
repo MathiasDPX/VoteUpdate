@@ -11,7 +11,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class CloseButton extends CustomItem {
     private ItemStack format(ItemStack initial) {
         ItemMeta meta = initial.getItemMeta();
-        meta.displayName(Component.text(Locales.getInstance().get("gui.close")).decoration(TextDecoration.ITALIC, false));
+        meta.displayName(Component.text(Locales.get("gui.close")).decoration(TextDecoration.ITALIC, false));
         initial.setItemMeta(meta);
         return initial;
     }

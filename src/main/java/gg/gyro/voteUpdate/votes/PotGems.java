@@ -14,12 +14,12 @@ public class PotGems extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.pot_gems.name");
+        return Locales.get("options.pot_gems.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.pot_gems.description");
+        return Locales.get("options.pot_gems.description");
     }
 
     @Override

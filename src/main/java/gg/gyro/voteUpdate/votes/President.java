@@ -19,12 +19,12 @@ public class President extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.president.name");
+        return Locales.get("options.president.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.president.description");
+        return Locales.get("options.president.description");
     }
 
     @Override
@@ -32,7 +32,7 @@ public class President extends Vote {
         ArrayList<Player> players = new ArrayList<>(Bukkit.getOnlinePlayers());
         Player president = players.get(new Random().nextInt(players.size()));
 
-        president.sendMessage(Locales.getInstance().get("options.president.message").replace("%president%", president.getName()));
+        president.sendMessage(Locales.get("options.president.message").replace("%president%", president.getName()));
         VotesManager.setPresident(president.getUniqueId());
     }
 }

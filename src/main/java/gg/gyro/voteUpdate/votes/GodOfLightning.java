@@ -14,12 +14,12 @@ public class GodOfLightning extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.god_of_lightning.name");
+        return Locales.get("options.god_of_lightning.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.god_of_lightning.description");
+        return Locales.get("options.god_of_lightning.description");
     }
 
     @Override

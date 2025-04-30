@@ -14,11 +14,6 @@ import revxrsal.commands.annotation.Named;
 import revxrsal.commands.bukkit.annotation.CommandPermission;
 
 public class ForceVote {
-    Locales locales;
-
-    public ForceVote() {
-        locales = Locales.getInstance();
-    }
 
     @Command("votes force")
     @AutoComplete("@votes")
@@ -27,11 +22,11 @@ public class ForceVote {
     public void force(CommandSender sender, @Named("force") String forcedVote) {
         Vote vote = Votes.getVoteFromString(forcedVote);
         if (vote == null) {
-            sender.sendMessage(locales.get("commands.vote_notfound").replace("%s",forcedVote));
+            sender.sendMessage(Locales.get("commands.vote_notfound").replace("%s",forcedVote));
             return;
         }
 
-        sender.sendMessage(locales.get("commands.force_voteresult").replace("%s",vote.getName()));
+        sender.sendMessage(Locales.get("commands.force_voteresult").replace("%s",vote.getName()));
         VoteUpdate.getInstance().getLogger().info("Applying "+vote.getId()+" vote");
 
         Bukkit.getPluginManager().callEvent(new ApplyVoteEvent(vote, ApplyVoteEvent.ApplyCause.FORCE));

@@ -15,12 +15,12 @@ public class HotPotatoes extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.hotpotatoes.name");
+        return Locales.get("options.hotpotatoes.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.hotpotatoes.description");
+        return Locales.get("options.hotpotatoes.description");
     }
 
     @Override

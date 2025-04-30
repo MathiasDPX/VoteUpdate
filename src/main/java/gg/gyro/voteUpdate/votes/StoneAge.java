@@ -17,19 +17,19 @@ public class StoneAge extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.stone_age.name");
+        return Locales.get("options.stone_age.name");
     }
 
     @Override
     public String getDescription() {
-        String playername = Locales.getInstance().get("options.stone_age.playername");
-        return Locales.getInstance().get("options.stone_age.description").replace("%playername%", playername);
+        String playername = Locales.get("options.stone_age.playername");
+        return Locales.get("options.stone_age.description").replace("%playername%", playername);
     }
 
     @Override
     public void apply() {
         VoteUpdate.registerEvents(new gg.gyro.voteUpdate.listeners.StoneAge());
-        Component playername = Component.text(Locales.getInstance().get("options.stone_age.playername"));
+        Component playername = Component.text(Locales.get("options.stone_age.playername"));
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.displayName(playername);
         }

@@ -14,12 +14,12 @@ public class UnstableTNT extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.unstable_tnt.name");
+        return Locales.get("options.unstable_tnt.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.unstable_tnt.description");
+        return Locales.get("options.unstable_tnt.description");
     }
 
     @Override

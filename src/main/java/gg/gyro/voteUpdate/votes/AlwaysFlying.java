@@ -14,12 +14,12 @@ public class AlwaysFlying extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.always_flying.name");
+        return Locales.get("options.always_flying.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.always_flying.description");
+        return Locales.get("options.always_flying.description");
     }
 
     @Override

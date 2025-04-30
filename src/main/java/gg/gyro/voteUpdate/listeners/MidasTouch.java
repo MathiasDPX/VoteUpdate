@@ -77,7 +77,7 @@ public class MidasTouch implements Listener {
     @EventHandler
     void onPlayerDeath(PlayerDeathEvent event) {
         Player player = event.getPlayer();
-        event.deathMessage(Component.text(Locales.getInstance().get("death_messages.midas_touch", player.displayName().toString())));
+        event.deathMessage(Component.text(Locales.get("death_messages.midas_touch", player.displayName().toString())));
     }
 
     @EventHandler

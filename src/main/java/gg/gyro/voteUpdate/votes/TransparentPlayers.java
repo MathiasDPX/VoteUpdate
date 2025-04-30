@@ -15,12 +15,12 @@ public class TransparentPlayers extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.transparent_players.name");
+        return Locales.get("options.transparent_players.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.transparent_players.description");
+        return Locales.get("options.transparent_players.description");
     }
 
     @Override

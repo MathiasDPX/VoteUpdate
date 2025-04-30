@@ -15,12 +15,12 @@ public class DefaultSheep extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.default_sheep.name");
+        return Locales.get("options.default_sheep.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.default_sheep.description");
+        return Locales.get("options.default_sheep.description");
     }
 
     @Override

@@ -10,7 +10,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 public class StoneAge implements Listener {
     @EventHandler
     void onJoin(PlayerJoinEvent event) {
-        Component playername = Component.text(Locales.getInstance().get("options.stone_age.playername"));
+        Component playername = Component.text(Locales.get("options.stone_age.playername"));
         Player player = event.getPlayer();
         player.playerListName(playername);
         player.displayName(playername);

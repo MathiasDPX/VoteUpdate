@@ -14,12 +14,12 @@ public class MidasTouch extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.midas_touch.name");
+        return Locales.get("options.midas_touch.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.midas_touch.description");
+        return Locales.get("options.midas_touch.description");
     }
 
     @Override

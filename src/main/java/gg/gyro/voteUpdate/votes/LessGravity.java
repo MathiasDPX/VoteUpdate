@@ -16,12 +16,12 @@ public class LessGravity extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.less_gravity.name");
+        return Locales.get("options.less_gravity.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.less_gravity.description");
+        return Locales.get("options.less_gravity.description");
     }
 
     @Override

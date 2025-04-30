@@ -20,12 +20,12 @@ public class PermaEffect extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.perma_effect.name");
+        return Locales.get("options.perma_effect.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.perma_effect.description");
+        return Locales.get("options.perma_effect.description");
     }
 
     @Override
@@ -37,6 +37,6 @@ public class PermaEffect extends Vote {
             player.addPotionEffect(effect);
         }
 
-        Bukkit.getServer().broadcast(Component.text(Locales.getInstance().get("options.perma_effect.broadcast").replace("%effect%", type.getKey().toString()).replace("%level%", Integer.toString(amplifier))));
+        Bukkit.getServer().broadcast(Component.text(Locales.get("options.perma_effect.broadcast").replace("%effect%", type.getKey().toString()).replace("%level%", Integer.toString(amplifier))));
     }
 }

@@ -23,12 +23,12 @@ public class AdvancedAI extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.advanced_ai.name");
+        return Locales.get("options.advanced_ai.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.advanced_ai.description");
+        return Locales.get("options.advanced_ai.description");
     }
 
     private void startBipBoopTask() {
@@ -60,7 +60,7 @@ public class AdvancedAI extends Vote {
         int random = new Random().nextInt(players.size());
         Player player = players.get(random);
 
-        Bukkit.getServer().broadcast(Component.text(Locales.getInstance().get("options.advanced_ai.broadcast").replace("%s", ((TextComponent) player.displayName()).content())));
+        Bukkit.getServer().broadcast(Component.text(Locales.get("options.advanced_ai.broadcast").replace("%s", ((TextComponent) player.displayName()).content())));
 
         player.displayName(Component.text("§7[BOT]§r ").append(player.displayName()));
 

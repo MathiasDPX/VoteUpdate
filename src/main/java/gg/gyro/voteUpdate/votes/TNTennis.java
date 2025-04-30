@@ -14,12 +14,12 @@ public class TNTennis extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.tntennis.name");
+        return Locales.get("options.tntennis.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.tntennis.description");
+        return Locales.get("options.tntennis.description");
     }
 
     @Override

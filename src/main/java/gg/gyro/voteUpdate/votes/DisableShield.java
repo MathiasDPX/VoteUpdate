@@ -14,12 +14,12 @@ public class DisableShield extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.disable_shield.name");
+        return Locales.get("options.disable_shield.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.disable_shield.description");
+        return Locales.get("options.disable_shield.description");
     }
 
     @Override

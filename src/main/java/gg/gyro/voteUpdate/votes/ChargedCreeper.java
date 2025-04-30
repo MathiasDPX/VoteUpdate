@@ -14,12 +14,12 @@ public class ChargedCreeper extends Vote {
 
     @Override
     public String getName() {
-        return Locales.getInstance().get("options.charged_creeper.name");
+        return Locales.get("options.charged_creeper.name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.getInstance().get("options.charged_creeper.description");
+        return Locales.get("options.charged_creeper.description");
     }
 
     @Override

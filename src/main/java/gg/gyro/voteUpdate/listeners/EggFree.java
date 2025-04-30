@@ -15,7 +15,7 @@ public class EggFree implements Listener {
     Material material;
 
     public EggFree(Material material) {
-        Bukkit.getServer().broadcast(Component.text(Locales.getInstance().get("options.egg_free.broadcast").replace("%material%", material.name().toLowerCase())));
+        Bukkit.getServer().broadcast(Component.text(Locales.get("options.egg_free.broadcast").replace("%material%", material.name().toLowerCase())));
         this.material = material;
     }
 

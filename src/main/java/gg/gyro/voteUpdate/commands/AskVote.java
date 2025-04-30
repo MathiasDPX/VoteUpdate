@@ -11,12 +11,6 @@ import revxrsal.commands.annotation.*;
 import revxrsal.commands.bukkit.annotation.CommandPermission;
 
 public class AskVote {
-    Locales locales;
-
-    public AskVote() {
-        locales = Locales.getInstance();
-    }
-
     @Command("votes ask")
     @AutoComplete("@votes @votes")
     @Description("Starts a vote between two options")
@@ -26,11 +20,11 @@ public class AskVote {
         Vote vote2 = Votes.getVoteFromString(vote2name);
 
         if (vote1 == null) {
-            sender.sendMessage(locales.get("commands.vote_notfound").replace("%s",vote1name));
+            sender.sendMessage(Locales.get("commands.vote_notfound").replace("%s",vote1name));
             return;
         }
         if (vote2 == null) {
-            sender.sendMessage(locales.get("commands.vote_notfound").replace("%s",vote2name));
+            sender.sendMessage(Locales.get("commands.vote_notfound").replace("%s",vote2name));
             return;
         }
 
