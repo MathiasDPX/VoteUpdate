@@ -119,3 +119,6 @@ options:
     name: "Stone Age"
     description: "Rename all players to '%playername%'"
     playername: "Stone"
+  fixpiston:
+    name: "Fix Piston"
+    description: "Pistons will explode when extending"

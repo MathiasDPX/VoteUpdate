@@ -9,6 +9,7 @@
 - [Disable Shields](/votes/disable_shields.md)
 - [Egg Free](/votes/egg_free.md)
 - [Fish Anythings](/votes/fish_anythings.md)
+- [Fix piston](/votes/fix_piston.md)
 - [French Mode](/votes/french_mode.md)
 - [God of Lightnings](/votes/god_of_lightning.md)
 - [Hot Potatoes](/votes/hot_potatoes.md)
