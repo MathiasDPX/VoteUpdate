@@ -32,7 +32,6 @@ public class VotesManager implements Listener {
     private final Vote option2;
     private final Map<UUID, Integer> votes;
     private final Inventory gui;
-    private static Locales locales;
 
     @Getter @Setter
     private static UUID president = null;

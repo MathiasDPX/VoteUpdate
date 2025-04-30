@@ -1,6 +1,5 @@
 package gg.gyro.voteUpdate.listeners;
 
-import gg.gyro.voteUpdate.VoteUpdate;
 import gg.gyro.voteUpdate.events.VoteEndEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
