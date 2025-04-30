@@ -122,3 +122,8 @@ options:
   fixpiston:
     name: "Fix Piston"
     description: "Pistons will explode when extending"
+  milkeverything:
+    name: "Milk Everything"
+    description: "Every mob and player can be milked"
+    mobmilk: "%mob% milk"
+    playermilk : "%player%'s milk"

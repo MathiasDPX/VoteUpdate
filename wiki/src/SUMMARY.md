@@ -28,6 +28,7 @@
   - [Keep Friends Close](votes/keep_friends_close.md)
   - [Midas Touch](votes/midas_touch.md)
   - [Moon Gravity](votes/moon_gravity.md)
+  - [Milk Everything](votes/milkeverything.md) 
   - [Perma-effects](votes/perma_effects.md)
   - [Pots of Gems](votes/pots_of_gems.md)
   - [Unstable TNT](votes/unstable_tnt.md)
