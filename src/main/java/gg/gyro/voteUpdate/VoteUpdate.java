@@ -32,8 +32,7 @@ public final class VoteUpdate extends JavaPlugin {
 
         MenuLib.init(this);
         locales = new Locales(this, getConfig().getString("language"));
-
-        new Votes();
+        Votes.initialize();
 
         BukkitCommandHandler handler = BukkitCommandHandler.create(this);
         handler.getAutoCompleter().registerSuggestion("votes", (args, sender, command) -> {

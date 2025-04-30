@@ -8,7 +8,7 @@ import java.util.*;
 public class Votes {
     @Getter static List<Vote> votes = new ArrayList<>();
 
-    public Votes() {
+    public static void initialize() {
         Reflections reflections = new Reflections("gg.gyro.voteUpdate.votes");
         Set<Class<? extends Vote>> votes_classz = reflections.getSubTypesOf(Vote.class);
         for (Class<? extends Vote> voteClass : votes_classz) {
