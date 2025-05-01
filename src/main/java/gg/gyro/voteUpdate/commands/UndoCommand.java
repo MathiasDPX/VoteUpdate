@@ -16,9 +16,9 @@ public class UndoCommand {
     @Command("votes undo invisible")
     @CommandPermission("votes.commands.undo.invisible")
     @Description("Makes all players visible")
-    public void invisible(CommandSender sender) {
+    public void invisible(CommandSender sender, @Default("@p") EntitySelector<Player> players) {
         sender.sendMessage(Locales.get("commands.undo").replace("%vote%", Locales.get("options.transparent_players.name")));
-        for (Player player: Bukkit.getOnlinePlayers()) {
+        for (Player player: players) {
             player.setInvisible(false);
         }
     }
