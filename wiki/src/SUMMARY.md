@@ -37,5 +37,5 @@
   - [Remove phantoms](votes/remove_phantoms.md)
   - [President](votes/president.md)
   - [Transparent Players](votes/transparent_players.md)
-  - [Uncraftable](/votes/uncraftable.md)
+  - [Uncraftable](votes/uncraftable.md)
   - [Voting fireworks](votes/voting_fireworks.md)
