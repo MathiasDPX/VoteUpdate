@@ -133,3 +133,6 @@ options:
   minime:
     name: "Mini Me"
     description: "All players will be shrunk to 1/2 their size"
+  playerskull:
+    name: "Player Skull"
+    description: "All players will drop their skull when killed"

@@ -32,6 +32,7 @@
   - [Mini-me](votes/minime.md)
   - [Perma-effects](votes/perma_effects.md)
   - [Pots of Gems](votes/pots_of_gems.md)
+  - [Player Skull](votes/playerskull.md)
   - [Unstable TNT](votes/unstable_tnt.md)
   - [TNTennis](votes/tntennis.md)
   - [Stone Age](votes/stone_age.md)
