@@ -12,3 +12,6 @@ Bring back gravity to 0.08 (default)
 
 ### Invisible
 Make every players visible
+
+### Minime
+Make players normal size

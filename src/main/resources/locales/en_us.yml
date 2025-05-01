@@ -130,3 +130,6 @@ options:
   uncraftable:
     name: "Uncraftable"
     description: "Add recipes for uncraftable items"
+  minime:
+    name: "Mini Me"
+    description: "All players will be shrunk to 1/2 their size"
