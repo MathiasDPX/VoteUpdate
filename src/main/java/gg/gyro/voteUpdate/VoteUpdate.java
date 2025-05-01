@@ -3,6 +3,7 @@
 import dev.xernas.menulib.MenuLib;
 import gg.gyro.localeAPI.Locales;
 import gg.gyro.voteUpdate.commands.*;
+import gg.gyro.voteUpdate.utils.NSKeyManager;
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
 import lombok.Getter;
@@ -30,6 +31,7 @@ public final class VoteUpdate extends JavaPlugin {
 
         MenuLib.init(this);
         Locales.initialize(this, getConfig().getString("language"));
+        NSKeyManager.initialize();
         Votes.initialize();
 
         BukkitCommandHandler handler = BukkitCommandHandler.create(this);

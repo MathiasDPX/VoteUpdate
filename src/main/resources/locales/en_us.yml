@@ -127,3 +127,6 @@ options:
     description: "Every mob and player can be milked"
     mobmilk: "%mob% milk"
     playermilk : "%player%'s milk"
+  uncraftable:
+    name: "Uncraftable"
+    description: "Add recipes for uncraftable items"
