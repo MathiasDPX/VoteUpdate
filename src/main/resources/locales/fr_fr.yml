@@ -107,3 +107,27 @@ options:
     name: "L'âge de pierre"
     description: "Renomme tout les joueurs en '%playername%'"
     playername: "Pierre"
+  hotpotatoes:
+    name: "Patates chaudes"
+    description: "Fait 1 dégats par seconde aux joueurs tenant une patate cuite"
+  president:
+    name: "Président"
+    description: "Un joueur sera élu président, ses votes compteront pour 2"
+    message: "%president% est votre nouveau président!"
+  fixpiston:
+    name: "Fixe les pistons"
+    description: "Les pistons explosent lorsqu'ils sont activés"
+  milkeverything:
+    name: "Traite tout"
+    description: "Tout les joueurs et mobs peuvent être traites"
+    mobmilk: "Lait de %mob%"
+    playermilk: "Lait de %player%"
+  uncraftable:
+    name: "Incraftable"
+    description: "Ajoute des recettes pour les items incraftables"
+  minime:
+    name: "Mini-moi"
+    description: "Réduit la taille des joueurs de moitié"
+  playerskull:
+    name: "Tête de joueur"
+    description: "Les joueurs donnent leur tête à la mort"
