@@ -8,18 +8,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class FixPiston extends Vote {
     @Override
+    public String getId() {
+        return "fixpiston";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.PISTON);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.fixpiston.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.fixpiston.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

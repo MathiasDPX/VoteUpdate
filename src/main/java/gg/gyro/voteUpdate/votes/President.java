@@ -13,18 +13,23 @@ import java.util.Random;
 
 public class President extends Vote {
     @Override
+    public String getId() {
+        return "president";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.STONE_SHOVEL);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.president.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.president.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override
@@ -32,7 +37,7 @@ public class President extends Vote {
         ArrayList<Player> players = new ArrayList<>(Bukkit.getOnlinePlayers());
         Player president = players.get(new Random().nextInt(players.size()));
 
-        president.sendMessage(Locales.get("options.president.message").replace("%president%", president.getName()));
+        president.sendMessage(Locales.get(getLocaleRoot()+"message").replace("%president%", president.getName()));
         VotesManager.setPresident(president.getUniqueId());
     }
 }

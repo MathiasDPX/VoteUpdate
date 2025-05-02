@@ -8,18 +8,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class VotingFireworks extends Vote {
     @Override
+    public String getId() {
+        return "voting_fireworks";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.FIREWORK_ROCKET);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.voting_fireworks.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.voting_fireworks.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

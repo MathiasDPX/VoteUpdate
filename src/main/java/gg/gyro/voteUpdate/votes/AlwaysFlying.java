@@ -8,18 +8,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class AlwaysFlying extends Vote {
     @Override
+    public String getId() {
+        return "always_flying";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.PHANTOM_MEMBRANE);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.always_flying.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.always_flying.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

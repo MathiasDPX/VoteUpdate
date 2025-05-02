@@ -11,18 +11,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class FrenchMode extends Vote {
     @Override
+    public String getId() {
+        return "french_mode";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new Tricolore().getBest();
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.french_mode.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.french_mode.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

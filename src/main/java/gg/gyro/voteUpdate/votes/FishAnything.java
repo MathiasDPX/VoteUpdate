@@ -8,18 +8,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class FishAnything extends Vote {
     @Override
+    public String getId() {
+        return "fish_anything";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.FISHING_ROD);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.fish_anything.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.fish_anything.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

@@ -3,13 +3,13 @@ package gg.gyro.voteUpdate.utils;
 import org.bukkit.inventory.ItemStack;
 
 public abstract class Vote {
-    private final String id;
-    public Vote() {
-        this.id = getName().toLowerCase().replace(" ", "_");
+    public Vote() {}
+
+    public String getLocaleRoot() {
+        return "options." + getId() + ".";
     }
 
-    public String getId() { return id; }
-
+    public abstract String getId();
     public abstract ItemStack getIcon();
     public abstract String getName();
     public abstract String getDescription();

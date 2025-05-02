@@ -8,18 +8,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class UnstableTNT extends Vote {
     @Override
+    public String getId() {
+        return "unstable_tnt";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.TNT);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.unstable_tnt.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.unstable_tnt.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

@@ -17,18 +17,23 @@ import java.util.stream.Collectors;
 public class KeepFriendsClose extends Vote {
 
     @Override
+    public String getId() {
+        return "keep_friends_close";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.LEAD);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.keep_friends_close.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.keep_friends_close.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

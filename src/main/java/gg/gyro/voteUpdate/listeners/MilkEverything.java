@@ -30,10 +30,11 @@ public class MilkEverything implements Listener {
             ItemStack bucket = new ItemStack(Material.MILK_BUCKET);
             ItemMeta meta = bucket.getItemMeta();
             String bucketname = null;
+            String rootLocale = new gg.gyro.voteUpdate.votes.MilkEverything().getLocaleRoot();
             if (entity instanceof Player player) {
-                bucketname = Locales.get("options.milkeverything.playermilk").replace("%player%", player.getName());
+                bucketname = Locales.get(rootLocale+"playermilk").replace("%player%", player.getName());
             } else {
-                bucketname = Locales.get("options.milkeverything.mobmilk").replace("%mob%", entity.getName());
+                bucketname = Locales.get(rootLocale+"mobmilk").replace("%mob%", entity.getName());
             }
 
             meta.displayName(Component.text(bucketname).decoration(TextDecoration.ITALIC, false));

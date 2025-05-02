@@ -9,18 +9,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class TransparentPlayers extends Vote {
     @Override
+    public String getId() {
+        return "transparent_players";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.BARRIER);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.transparent_players.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.transparent_players.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

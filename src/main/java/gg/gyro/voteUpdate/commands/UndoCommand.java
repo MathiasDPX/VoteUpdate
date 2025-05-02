@@ -1,6 +1,8 @@
 package gg.gyro.voteUpdate.commands;
 
 import gg.gyro.localeAPI.Locales;
+import gg.gyro.voteUpdate.votes.Minime;
+import gg.gyro.voteUpdate.votes.TransparentPlayers;
 import org.bukkit.Bukkit;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
@@ -17,7 +19,7 @@ public class UndoCommand {
     @CommandPermission("votes.commands.undo.invisible")
     @Description("Makes all players visible")
     public void invisible(CommandSender sender, @Default("@p") EntitySelector<Player> players) {
-        sender.sendMessage(Locales.get("commands.undo").replace("%vote%", Locales.get("options.transparent_players.name")));
+        sender.sendMessage(Locales.get("commands.undo").replace("%vote%", Locales.get(new TransparentPlayers().getLocaleRoot()+"name")));
         for (Player player: players) {
             player.setInvisible(false);
         }
@@ -27,7 +29,7 @@ public class UndoCommand {
     @CommandPermission("votes.commands.undo.minime")
     @Description("Resets the size of all players to normal")
     public void minime(CommandSender sender, @Default("@p") EntitySelector<Player> players) {
-        sender.sendMessage(Locales.get("commands.undo").replace("%vote%", Locales.get("options.minime.name")));
+        sender.sendMessage(Locales.get("commands.undo").replace("%vote%", Locales.get(new Minime().getLocaleRoot()+"name")));
         for (Player player: players) {
             AttributeInstance attribute = player.getAttribute(Attribute.SCALE);
             if (attribute != null) {

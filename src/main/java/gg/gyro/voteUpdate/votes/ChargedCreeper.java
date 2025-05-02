@@ -8,18 +8,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class ChargedCreeper extends Vote {
     @Override
+    public String getId() {
+        return "charged_creeper";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.CREEPER_HEAD);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.charged_creeper.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.charged_creeper.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

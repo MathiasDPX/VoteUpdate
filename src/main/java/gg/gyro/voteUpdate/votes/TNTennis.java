@@ -8,18 +8,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class TNTennis extends Vote {
     @Override
+    public String getId() {
+        return "";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.TNT);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.tntennis.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.tntennis.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

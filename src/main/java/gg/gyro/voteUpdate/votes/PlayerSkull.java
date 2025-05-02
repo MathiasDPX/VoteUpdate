@@ -10,18 +10,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class PlayerSkull extends Vote {
     @Override
+    public String getId() {
+        return "playerskull";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return Skull.getCustomSkull("https://textures.minecraft.net/texture/eb7f5761f4ca72452dc18ea218db149020f7fcb148431547a0aab44d54b6cc74");
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.playerskull.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.playerskull.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

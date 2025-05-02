@@ -9,22 +9,27 @@ import org.bukkit.inventory.ItemStack;
 public class DefaultSheep extends Vote {
 
     @Override
+    public String getId() {
+        return "default_sheep";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.SHEEP_SPAWN_EGG);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.default_sheep.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.default_sheep.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override
     public void apply() {
-        VoteUpdate.registerEvents(new gg.gyro.voteUpdate.listeners.DefaultSheep());
+        VoteUpdate.registerEvents(new gg.gyro.voteUpdate.listeners.DefaultSheep(this));
     }
 }

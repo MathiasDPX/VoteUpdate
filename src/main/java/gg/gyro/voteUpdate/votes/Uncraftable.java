@@ -12,18 +12,23 @@ import org.bukkit.inventory.ShapelessRecipe;
 
 public class Uncraftable extends Vote {
     @Override
+    public String getId() {
+        return "uncraftable";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.CRAFTING_TABLE);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.uncraftable.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.uncraftable.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

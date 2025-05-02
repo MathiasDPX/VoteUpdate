@@ -1,6 +1,7 @@
 package gg.gyro.voteUpdate.listeners;
 
 import gg.gyro.localeAPI.Locales;
+import gg.gyro.voteUpdate.utils.Vote;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.DyeColor;
@@ -14,9 +15,9 @@ import java.util.Random;
 public class DefaultSheep implements Listener {
     DyeColor color;
 
-    public DefaultSheep() {
+    public DefaultSheep(Vote vote) {
         this.color = DyeColor.values()[new Random().nextInt(DyeColor.values().length)];
-        Bukkit.getServer().broadcast(Component.text(Locales.get("options.default_sheep.broadcast").replace("%color%", color.name().toLowerCase())));
+        Bukkit.getServer().broadcast(Component.text(Locales.get(vote.getLocaleRoot()+"broadcast").replace("%color%", color.name().toLowerCase())));
     }
 
     @EventHandler

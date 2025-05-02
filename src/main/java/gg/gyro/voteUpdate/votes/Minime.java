@@ -12,18 +12,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class Minime extends Vote {
     @Override
+    public String getId() {
+        return "minime";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.CHERRY_SLAB);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.minime.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.minime.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     public static void minimizePlayer(Player player) {

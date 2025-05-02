@@ -14,18 +14,23 @@ import java.util.Random;
 
 public class PermaEffect extends Vote {
     @Override
+    public String getId() {
+        return "perma_effect";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.GLASS_BOTTLE);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.perma_effect.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.perma_effect.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override
@@ -37,6 +42,6 @@ public class PermaEffect extends Vote {
             player.addPotionEffect(effect);
         }
 
-        Bukkit.getServer().broadcast(Component.text(Locales.get("options.perma_effect.broadcast").replace("%effect%", type.getKey().toString()).replace("%level%", Integer.toString(amplifier))));
+        Bukkit.getServer().broadcast(Component.text(Locales.get(getLocaleRoot()+"broadcast").replace("%effect%", type.getKey().toString()).replace("%level%", Integer.toString(amplifier))));
     }
 }

@@ -11,18 +11,23 @@ import org.bukkit.inventory.ItemStack;
 public class RemovePhantoms extends Vote {
 
     @Override
+    public String getId() {
+        return "remove_phantoms";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.PHANTOM_MEMBRANE);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.remove_phantoms.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.remove_phantoms.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

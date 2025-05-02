@@ -10,23 +10,28 @@ import java.util.Random;
 
 public class EggFree extends Vote {
     @Override
+    public String getId() {
+        return "egg_free";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.EGG);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.egg_free.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.egg_free.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override
     public void apply() {
         Material material = Material.values()[new Random().nextInt(Material.values().length)];
-        VoteUpdate.registerEvents(new gg.gyro.voteUpdate.listeners.EggFree(material));
+        VoteUpdate.registerEvents(new gg.gyro.voteUpdate.listeners.EggFree(this, material));
     }
 }

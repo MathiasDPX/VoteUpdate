@@ -8,18 +8,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class MidasTouch extends Vote {
     @Override
+    public String getId() {
+        return "midas_touch";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.GOLD_INGOT);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.midas_touch.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.midas_touch.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

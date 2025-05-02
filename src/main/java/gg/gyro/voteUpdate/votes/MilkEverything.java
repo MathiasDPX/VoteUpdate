@@ -8,18 +8,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class MilkEverything extends Vote {
     @Override
+    public String getId() {
+        return "";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.MILK_BUCKET);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.milkeverything.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.milkeverything.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

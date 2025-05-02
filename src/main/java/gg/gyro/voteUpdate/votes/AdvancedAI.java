@@ -17,18 +17,23 @@ import java.util.Random;
 public class AdvancedAI extends Vote {
 
     @Override
+    public String getId() {
+        return "advanced_ai";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return Skull.getCustomSkull("https://textures.minecraft.net/texture/b369f1369958234d17e6b8c1ebf301475ab992f1a02bb946cf369894f61d1a53");
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.advanced_ai.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.advanced_ai.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     private void startBipBoopTask() {
@@ -60,7 +65,7 @@ public class AdvancedAI extends Vote {
         int random = new Random().nextInt(players.size());
         Player player = players.get(random);
 
-        Bukkit.getServer().broadcast(Component.text(Locales.get("options.advanced_ai.broadcast").replace("%s", ((TextComponent) player.displayName()).content())));
+        Bukkit.getServer().broadcast(Component.text(Locales.get(getLocaleRoot()+"broadcast").replace("%s", ((TextComponent) player.displayName()).content())));
 
         player.displayName(Component.text("§7[BOT]§r ").append(player.displayName()));
 

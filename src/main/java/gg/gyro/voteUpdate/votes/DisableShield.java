@@ -8,18 +8,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class DisableShield extends Vote {
     @Override
+    public String getId() {
+        return "disable_shield";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.SHIELD);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.disable_shield.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.disable_shield.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

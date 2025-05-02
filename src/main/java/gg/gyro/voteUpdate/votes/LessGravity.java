@@ -10,18 +10,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class LessGravity extends Vote {
     @Override
+    public String getId() {
+        return "less_gravity";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.RED_BED);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.less_gravity.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.less_gravity.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

@@ -8,18 +8,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class PotGems extends Vote {
     @Override
+    public String getId() {
+        return "pot_gems";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.DECORATED_POT);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.pot_gems.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.pot_gems.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

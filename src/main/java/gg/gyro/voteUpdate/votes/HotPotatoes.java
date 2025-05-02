@@ -9,18 +9,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class HotPotatoes extends Vote {
     @Override
+    public String getId() {
+        return "hotpotatoes";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.BAKED_POTATO);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.hotpotatoes.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.hotpotatoes.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override

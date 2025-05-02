@@ -25,18 +25,23 @@ public class BinaryGameruleFlip extends Vote {
     }
 
     @Override
+    public String getId() {
+        return "binary_gamerule_flip";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return Skull.getCustomSkull("https://textures.minecraft.net/texture/dcafbac5068197fda18636dfc4ce7f9df5af9b2a06e6f91e38ae35e4c435b2df");
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.binary_gamerule_flip.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.binary_gamerule_flip.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override
@@ -48,13 +53,13 @@ public class BinaryGameruleFlip extends Vote {
         Boolean def = (Boolean) ow.getGameRuleValue(choosed);
         ow.setGameRule(choosed, !def);
 
-        String msg = Locales.get("options.binary_gamerule_flip.broadcast")
+        String msg = Locales.get(getLocaleRoot()+"broadcast")
                         .replace("%gr%", choosed.getName());
 
         if (!def) {
-            msg = msg.replace("%value%", Locales.get("options.binary_gamerule_flip.true"));
+            msg = msg.replace("%value%", Locales.get(getLocaleRoot()+"true"));
         } else {
-            msg = msg.replace("%value%", Locales.get("options.binary_gamerule_flip.false"));
+            msg = msg.replace("%value%", Locales.get(getLocaleRoot()+"false"));
         }
 
         Bukkit.getServer().broadcast(Component.text(msg));

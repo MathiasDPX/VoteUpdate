@@ -11,18 +11,23 @@ import org.bukkit.inventory.ItemStack;
 
 public class TrapEveryone extends Vote {
     @Override
+    public String getId() {
+        return "trapall";
+    }
+
+    @Override
     public ItemStack getIcon() {
         return new ItemStack(Material.CHAIN);
     }
 
     @Override
     public String getName() {
-        return Locales.get("options.trapall.name");
+        return Locales.get(getLocaleRoot()+"name");
     }
 
     @Override
     public String getDescription() {
-        return Locales.get("options.trapall.description");
+        return Locales.get(getLocaleRoot()+"description");
     }
 
     @Override
