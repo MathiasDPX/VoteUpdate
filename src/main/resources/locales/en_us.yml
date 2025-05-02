@@ -136,3 +136,6 @@ options:
   playerskull:
     name: "Player Skull"
     description: "All players will drop their skull when killed"
+  trapall:
+    name: "Trap All"
+    description: "All players will be trapped in a cage made of iron bars"
