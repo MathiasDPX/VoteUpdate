@@ -29,3 +29,4 @@
 - [Transparent Players](/votes/transparent_players.md)
 - [Uncraftable](/votes/uncraftable.md)
 - [Voting fireworks](/votes/voting_fireworks.md)
+- [HTTP Messages](/votes/http_message.md)

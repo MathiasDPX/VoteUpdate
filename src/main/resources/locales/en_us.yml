@@ -139,3 +139,6 @@ options:
   trapall:
     name: "Trap All"
     description: "All players will be trapped in a cage made of iron bars"
+  http_message:
+    name: "HTTP Message"
+    description: "All players will be kicked with a random HTTP 4xx error code"

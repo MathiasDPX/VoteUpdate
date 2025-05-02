@@ -25,6 +25,7 @@
   - [French Mode](votes/french_mode.md)
   - [God of Lightnings](votes/god_of_lightning.md)
   - [Hot Potatoes](votes/hot_potatoes.md)
+  - [HTTP Messages](votes/http_message.md)
   - [Keep Friends Close](votes/keep_friends_close.md)
   - [Midas Touch](votes/midas_touch.md)
   - [Moon Gravity](votes/moon_gravity.md)
