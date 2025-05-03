@@ -48,7 +48,8 @@ public final class VoteUpdate extends JavaPlugin {
                 new ForceVote(),
                 new ListVotes(),
                 new UndoCommand(),
-                new TurnONOFF()
+                new TurnONOFF(),
+                new VoteCommand()
         );
 
         if (getConfig().getInt("vote_delay") == 0) {
@@ -59,7 +60,11 @@ public final class VoteUpdate extends JavaPlugin {
                 @Override
                 public void run() {
                     if (!TurnONOFF.isVoteOn) { return; }
-                    new VotesManager(Votes.getRandomVote(), Votes.getRandomVote());
+                    try {
+                        new VotesManager(Votes.getRandomVote(), Votes.getRandomVote());
+                    } catch (Exception e) {
+                        getLogger().warning(Locales.get("commands.already_running"));
+                    }
                 }
             }.runTaskTimer(this, 600, getConfig().getInt("vote_delay")*20L);
         }

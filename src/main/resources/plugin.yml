@@ -14,6 +14,9 @@ permissions:
   votes.commands:
     default: op
     description: Allows the player to use /votes command
+  votes.commands.vote:
+    default: true
+    description: Allows the player to use /vote command
   votes.commands.list:
     default: true
     description: Allows the player to use see votes possibility

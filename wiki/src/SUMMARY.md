@@ -10,6 +10,7 @@
   - [Force](commands/force.md)
   - [Undo](commands/undo.md)
   - [On/Off](commands/on_off.md)
+  - [Vote](commands/vote.md)
 
 - [Votes](votes/index.md)
   - [Advanced AI](votes/advanced_ai.md)

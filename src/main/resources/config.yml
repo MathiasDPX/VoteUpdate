@@ -9,6 +9,10 @@ vote_delay: 300
 # Default: true
 mandatory: true
 
+# Optional
+# Don't open the vote menu if enabled, mandatory is ignored if set to True
+optional: false
+
 # Disabled votes
 # Use id (id = name in lowercase, replace space with underscore)
 # Default: []

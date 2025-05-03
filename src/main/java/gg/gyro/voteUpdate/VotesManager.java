@@ -31,17 +31,22 @@ public class VotesManager implements Listener {
     private final Vote option1;
     private final Vote option2;
     private final Map<UUID, Integer> votes;
-    private final Inventory gui;
+
+    @Getter private static Inventory gui;
 
     @Getter @Setter
     private static UUID president = null;
 
     public VotesManager(Vote option1, Vote option2) {
+        if (gui != null) {
+            throw new RuntimeException("A vote is already in progress");
+        }
+
         this.plugin = VoteUpdate.getInstance();
         this.option1 = option1;
         this.option2 = option2;
         this.votes = new HashMap<>();
-        this.gui = Bukkit.createInventory(null, 9, Component.text(Locales.get("gui.title")));
+        gui = Bukkit.createInventory(null, 9, Component.text(Locales.get("gui.title")));
 
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
         plugin.getLogger().info("Starting new votes ("+option1.getId()+" or "+option2.getId()+")");
@@ -51,8 +56,13 @@ public class VotesManager implements Listener {
     public void proposeVote() {
         setupGUI();
 
+        boolean isOptional = VoteUpdate.getInstance().getConfig().getBoolean("optional", false);
         for (Player player : Bukkit.getOnlinePlayers()) {
             if (player.hasPermission("votes.banvote")) continue;
+            if (isOptional)  {
+                player.sendMessage(Component.text(Locales.get("commands.new_vote")));
+                continue;
+            };
             player.openInventory(gui);
         }
 
@@ -134,6 +144,8 @@ public class VotesManager implements Listener {
     }
 
     private void showResults() {
+        gui = null;
+
         int votesOption1 = (int) votes.values().stream().filter(v -> v == 1).count();
         int votesOption2 = (int) votes.values().stream().filter(v -> v == 2).count();
 

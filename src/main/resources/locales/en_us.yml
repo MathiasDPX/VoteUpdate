@@ -12,6 +12,11 @@ commands:
   force_voteresult: "Forced to run %s"
   sender_not_player: "Only players can use this command"
   undo: "Undoing vote %vote%"
+  already_running: "A vote is already running"
+
+  new_vote: "A new vote has started!"
+  no_vote_running: "No vote is currently running"
+  open_vote: "Votes aren't optional"
 
   onoff:
     already_on: "Votes are already enabled"

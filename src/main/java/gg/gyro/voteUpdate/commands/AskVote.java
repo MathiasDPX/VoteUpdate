@@ -5,6 +5,8 @@ import gg.gyro.voteUpdate.VotesManager;
 import gg.gyro.voteUpdate.events.VoteStartEvent;
 import gg.gyro.voteUpdate.utils.Vote;
 import gg.gyro.voteUpdate.utils.Votes;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import revxrsal.commands.annotation.*;
@@ -29,6 +31,10 @@ public class AskVote {
         }
 
         Bukkit.getPluginManager().callEvent(new VoteStartEvent(vote1, vote2, VoteStartEvent.StartCause.FORCE));
-        new VotesManager(vote1, vote2);
+        try {
+            new VotesManager(vote1, vote2);
+        } catch (Exception e) {
+            sender.sendMessage(Component.text(Locales.get("commands.already_running")).color(NamedTextColor.RED));
+        }
     }
 }
