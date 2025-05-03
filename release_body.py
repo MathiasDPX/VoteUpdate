@@ -12,6 +12,6 @@ if r.status_code == 200:
     response = r.json()
     latest_release = response.get("tag_name", "???")
 
-bodyfile.write(f"**Full changelog**: https://github.com/{GITHUB_REPO}/compare/v{latest_release}...v{VERSION}")
+bodyfile.write(f"**Full changelog**: https://github.com/{GITHUB_REPO}/compare/{latest_release}...v{VERSION}")
 
 bodyfile.close()
