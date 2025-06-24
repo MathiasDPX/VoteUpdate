@@ -147,3 +147,6 @@ options:
   http_message:
     name: "HTTP Message"
     description: "All players will be kicked with a random HTTP 4xx error code"
+  double_half:
+    name: "Double or Half"
+    description: "Double or half recipe's output"
