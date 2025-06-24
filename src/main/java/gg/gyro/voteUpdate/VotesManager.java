@@ -102,6 +102,7 @@ public class VotesManager implements Listener {
         if (!event.getInventory().equals(gui)) return;
         if (!(event.getPlayer() instanceof Player player)) return;
         if (!VoteUpdate.getInstance().getConfig().getBoolean("mandatory")) return;
+        if (VoteUpdate.getInstance().getConfig().getBoolean("optional")) return;
 
         if (!votes.containsKey(player.getUniqueId())) {
             Bukkit.getScheduler().runTaskLater(VoteUpdate.getInstance(), () -> player.openInventory(gui), 1);

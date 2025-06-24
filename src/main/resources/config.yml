@@ -5,11 +5,11 @@ language: "en_us"
 # Default: 300
 vote_delay: 300
 
-# Is voting mandatory ?
+# Mandatory = Open the vote menu when a vote happens and don't allow closing it
 # Default: true
 mandatory: true
 
-# Optional
+# Optional = Open the vote menu when `/vote` is executed, allow to close it
 # Don't open the vote menu if enabled, mandatory is ignored if set to True
 optional: false
 
